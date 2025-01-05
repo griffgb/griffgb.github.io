@@ -1,32 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>Griffin Graham-Bennett - Home</title>
   <style>
-    body {
+    /* Basic resets */
+    html, body {
       margin: 0;
-      padding: 20px;
-      background: linear-gradient(to bottom right, #f0f0f0, #ffffff); /* Subtle gradient */
+      padding: 0;
       font-family: Arial, sans-serif;
+      background: #ffffff; /* Body background can remain white or any color you like */
     }
 
     .container {
       max-width: 800px;
       margin: 0 auto;
+      padding: 20px;
       text-align: center;
     }
 
-    h2 {
-      margin-bottom: 0;
-    }
-
-    .intro {
-      margin-bottom: 30px;
-      color: #333;
-    }
-
-    /* Circle profile picture */
+    /* Profile picture styling */
     .profile-pic {
       width: 120px;
       height: 120px;
@@ -35,108 +28,97 @@
       margin-bottom: 20px;
     }
 
-    /* Code-like styling */
-    .code-block {
-      background-color: #f4f4f4;
+    /* OPTIONAL: A heading or tagline above your code snippet */
+    .intro-text {
+      color: #333;
+      margin: 10px 0 20px 0;
+      font-size: 1.1em;
+    }
+
+    /* Dark-themed code block */
+    .code-block-dark {
+      background-color: #1e1e1e; /* Typical VSCode background */
+      color: #d4d4d4; /* Light text */
       text-align: left;
       padding: 20px;
       border-radius: 5px;
-      font-family: Consolas, "Courier New", monospace; /* A monospace font */
-      border: 1px solid #ddd; 
-      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      font-family: Consolas, "Courier New", monospace; 
+      border: 1px solid #333; 
+      box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+      /* Optionally give it some margin for breathing room */
+      margin-top: 20px;
     }
-    .code-block pre {
+
+    .code-block-dark pre {
       margin: 0;
       line-height: 1.4;
       font-size: 14px;
     }
 
-    .function-name {
-      color: #007BFF;
-      font-weight: bold;
-    }
-
-    .code-key {
-      color: #d9534f; /* Example color for property keys */
-      font-weight: bold;
-    }
-
+    /* Syntax highlighting styles */
     .comment {
-      color: #999999;
+      color: #6A9955; /* Greenish comment color */
       font-style: italic;
     }
-
-    /* Make the “calls” look like code, but are actually links */
-    .nav-link {
-      color: #5bc0de; 
-      text-decoration: none;
+    .function-name {
+      color: #C586C0; /* Purple color for function names */
       font-weight: bold;
-      transition: color 0.3s;
     }
-    .nav-link:hover {
-      text-decoration: underline;
-      color: #007BFF;
+    .variable {
+      color: #dcdcaa; /* Yellowish for vars/keys */
+    }
+    .string {
+      color: #ce9178; /* Reddish hue for strings */
     }
 
+    /* Navigation links styled as code calls */
     .nav-call {
-      margin-bottom: 5px;
+      color: #4EC9B0; /* Cyan color for function calls */
+      text-decoration: none;
+      font-weight: normal; /* Keep it looking like code */
+    }
+    .nav-call:hover {
+      text-decoration: underline; /* Visual feedback on hover */
     }
 
-    /* Console-like section */
-    .console-output {
-      background-color: #333;
-      color: #00ff00;
-      font-family: Consolas, "Courier New", monospace;
-      padding: 15px;
-      margin-top: 20px;
-      border-radius: 5px;
-      text-align: left;
-    }
-    .console-output p {
-      margin: 0;
+    /* Slight spacing between lines where calls appear */
+    .line {
+      margin-bottom: 4px;
     }
   </style>
 </head>
 <body>
   <div class="container">
-    <!-- Intro Section -->
-    <h2>Welcome to My Playful Coding-Themed Homepage</h2>
-    <p class="intro">
-      I'm Griffin Graham-Bennett, a passionate programmer who makes things work... sometimes.  
-      Enjoy exploring my “source code” below!
+
+    <!-- Profile Picture -->
+    <img src="profileSmall.jpeg" alt="Profile Picture" class="profile-pic" />
+
+    <!-- Optional small intro or tagline above the code snippet -->
+    <p class="intro-text">
+      I'm Griffin Graham-Bennett, a passionate programmer who makes things work... sometimes.
     </p>
 
-    <!-- Profile picture -->
-    <img src="profileSmall.jpg" alt="Profile Picture" class="profile-pic" />
-
-    <!-- Code-style container -->
-    <div class="code-block">
+    <!-- Dark-themed code snippet -->
+    <div class="code-block-dark">
       <pre>
-<span class="comment">/** 
- * Hi, I'm Griffin. 
- * A passionate programmer who makes things work... sometimes.
- * Feel free to browse my code! 
+<span class="comment">/**
+ * Griffin Graham-Bennett
+ * A passionate programmer who makes things work... sometimes
  */</span>
 
 <span class="function-name">function</span> GriffinGrahamBennett() &#123;
-  <span class="code-key">this.skills</span> = ["JavaScript", "Python", "HTML/CSS"];
-  <span class="code-key">this.interests</span> = ["Gaming", "Hiking", "Photography"];
-  <span class="code-key">this.getIntro</span> = () => "Hello! I'm Griffin, nice to meet you!";
+  <span class="comment">// My skills and interests</span>
+  <span class="variable">let</span> skills = <span class="string">["JavaScript", "Python", "HTML/CSS"]</span>;
+  <span class="variable">let</span> interests = <span class="string">["Gaming", "Hiking", "Photography"]</span>;
+
+  <span class="comment">// Navigation calls (click to explore)</span>
+  <a href="about.html" class="nav-call">About();</a>
+  <a href="resume.html" class="nav-call">Resume();</a>
+  <a href="education.html" class="nav-call">Education();</a>
+  <a href="projects.html" class="nav-call">Projects();</a>
+  <a href="contact.html" class="nav-call">Contact();</a>
 &#125;
-
-<span class="comment">// Navigation calls (click to explore)</span>
-<span class="nav-call"><a class="nav-link" href="about.html">About()</a>;</span>
-<span class="nav-call"><a class="nav-link" href="resume.html">Resume()</a>;</span>
-<span class="nav-call"><a class="nav-link" href="education.html">Education()</a>;</span>
-<span class="nav-call"><a class="nav-link" href="projects.html">Projects()</a>;</span>
-<span class="nav-call"><a class="nav-link" href="contact.html">Contact()</a>;</span>
       </pre>
-    </div>
-
-    <!-- Console Output Section -->
-    <div class="console-output">
-      <p>> console.log("Hello! Griffin here. Welcome to my site.");</p>
-      <p>"Hello! Griffin here. Welcome to my site."</p>
     </div>
 
   </div>
