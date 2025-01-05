@@ -7,14 +7,25 @@
     body {
       margin: 0;
       padding: 20px;
-      background-color: #ffffff;
+      background: linear-gradient(to bottom right, #f0f0f0, #ffffff); /* Subtle gradient */
       font-family: Arial, sans-serif;
     }
+
     .container {
-      max-width: 600px;
+      max-width: 800px;
       margin: 0 auto;
       text-align: center;
     }
+
+    h2 {
+      margin-bottom: 0;
+    }
+
+    .intro {
+      margin-bottom: 30px;
+      color: #333;
+    }
+
     /* Circle profile picture */
     .profile-pic {
       width: 120px;
@@ -23,6 +34,7 @@
       object-fit: cover;
       margin-bottom: 20px;
     }
+
     /* Code-like styling */
     .code-block {
       background-color: #f4f4f4;
@@ -30,23 +42,33 @@
       padding: 20px;
       border-radius: 5px;
       font-family: Consolas, "Courier New", monospace; /* A monospace font */
+      border: 1px solid #ddd; 
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     }
     .code-block pre {
       margin: 0;
       line-height: 1.4;
+      font-size: 14px;
     }
-    /* Slightly different color for function names or keywords */
+
     .function-name {
       color: #007BFF;
       font-weight: bold;
     }
+
+    .code-key {
+      color: #d9534f; /* Example color for property keys */
+      font-weight: bold;
+    }
+
     .comment {
       color: #999999;
       font-style: italic;
     }
+
     /* Make the “calls” look like code, but are actually links */
     .nav-link {
-      color: #333;
+      color: #5bc0de; 
       text-decoration: none;
       font-weight: bold;
       transition: color 0.3s;
@@ -55,33 +77,68 @@
       text-decoration: underline;
       color: #007BFF;
     }
-    /* Slight spacing below each "call" */
+
     .nav-call {
       margin-bottom: 5px;
+    }
+
+    /* Console-like section */
+    .console-output {
+      background-color: #333;
+      color: #00ff00;
+      font-family: Consolas, "Courier New", monospace;
+      padding: 15px;
+      margin-top: 20px;
+      border-radius: 5px;
+      text-align: left;
+    }
+    .console-output p {
+      margin: 0;
     }
   </style>
 </head>
 <body>
   <div class="container">
+    <!-- Intro Section -->
+    <h2>Welcome to My Playful Coding-Themed Homepage</h2>
+    <p class="intro">
+      I'm Griffin Graham-Bennett, a passionate programmer who makes things work... sometimes.  
+      Enjoy exploring my “source code” below!
+    </p>
+
     <!-- Profile picture -->
-    <img src="profileSmall.jpg" alt="Profile Picture" class="profile-pic">
+    <img src="profileSmall.jpg" alt="Profile Picture" class="profile-pic" />
 
     <!-- Code-style container -->
     <div class="code-block">
       <pre>
+<span class="comment">/** 
+ * Hi, I'm Griffin. 
+ * A passionate programmer who makes things work... sometimes.
+ * Feel free to browse my code! 
+ */</span>
+
 <span class="function-name">function</span> GriffinGrahamBennett() &#123;
-  <span class="comment">// A passionate programmer who makes things work... sometimes</span>
+  <span class="code-key">this.skills</span> = ["JavaScript", "Python", "HTML/CSS"];
+  <span class="code-key">this.interests</span> = ["Gaming", "Hiking", "Photography"];
+  <span class="code-key">this.getIntro</span> = () => "Hello! I'm Griffin, nice to meet you!";
 &#125;
-</pre>
-      
-      <pre>
+
+<span class="comment">// Navigation calls (click to explore)</span>
 <span class="nav-call"><a class="nav-link" href="about.html">About()</a>;</span>
 <span class="nav-call"><a class="nav-link" href="resume.html">Resume()</a>;</span>
 <span class="nav-call"><a class="nav-link" href="education.html">Education()</a>;</span>
 <span class="nav-call"><a class="nav-link" href="projects.html">Projects()</a>;</span>
 <span class="nav-call"><a class="nav-link" href="contact.html">Contact()</a>;</span>
-</pre>
+      </pre>
     </div>
+
+    <!-- Console Output Section -->
+    <div class="console-output">
+      <p>> console.log("Hello! Griffin here. Welcome to my site.");</p>
+      <p>"Hello! Griffin here. Welcome to my site."</p>
+    </div>
+
   </div>
 </body>
 </html>
