@@ -4,12 +4,7 @@
   <meta charset="UTF-8" />
   <title>Griffin Graham-Bennett - Home</title>
   <style>
-    /* 
-      1) DARK BACKGROUND:
-         Using a dark-gray background for the whole page to match the code block. 
-      2) LIGHT TEXT:
-         We'll use lighter text colors throughout for readability on dark backgrounds.
-    */
+    /* DARK BACKGROUND & LIGHT TEXT */
     html, body {
       margin: 0;
       padding: 0;
@@ -25,30 +20,54 @@
       text-align: center;
     }
 
-    /* ENLARGED PROFILE PICTURE */
+    /* PROFILE PICTURE */
     .profile-pic {
       width: 160px;
       height: 160px;
       border-radius: 50%;
       object-fit: cover;
       margin-bottom: 20px;
-      /* Optional border or box-shadow to make it pop */
       border: 3px solid #444;
       box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
     }
 
-    /* A short intro or tagline above the code snippet */
+    /* BIG NAME UNDER THE PROFILE PICTURE */
+    h1.name {
+      font-size: 2em;
+      font-weight: bold;
+      margin: 0;
+      margin-bottom: 10px;
+    }
+
+    /* OPTIONAL SHORT INTRO/TAGLINE */
     .intro-text {
-      margin: 10px 0 20px 0;
+      margin: 0 0 20px 0;
       font-size: 1.1em;
-      /* Slightly lighter shade for contrast */
       color: #CCCCCC;
     }
 
-    /* DARK-THEMED CODE BLOCK */
+    /* SOCIAL LINKS (LinkedIn, GitHub) */
+    .social-links {
+      margin: 15px 0 30px 0; /* Spacing around icons */
+    }
+    .social-links a {
+      display: inline-block;
+      margin: 0 10px;
+    }
+    /* Example icon styling */
+    .social-links img {
+      width: 32px;
+      height: 32px;
+      transition: opacity 0.2s;
+    }
+    .social-links img:hover {
+      opacity: 0.7; /* Subtle hover effect */
+    }
+
+    /* CODE BLOCK (VS CODE THEME) */
     .code-block-dark {
       background-color: #1E1E1E; /* Typical VS Code dark background */
-      color: #D4D4D4;           /* Light text */
+      color: #D4D4D4;           
       text-align: left;
       padding: 20px;
       border-radius: 5px;
@@ -57,20 +76,19 @@
       box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
       margin-top: 20px;
     }
-
     .code-block-dark pre {
       margin: 0;
       line-height: 1.4;
       font-size: 14px;
     }
 
-    /* Syntax highlighting styles */
+    /* SYNTAX HIGHLIGHTING */
     .comment {
       color: #6A9955; /* Greenish comment color */
       font-style: italic;
     }
     .function-name {
-      color: #C586C0; /* Purple color for function names */
+      color: #C586C0; /* Purple color */
       font-weight: bold;
     }
     .variable {
@@ -84,10 +102,10 @@
     .nav-call {
       color: #4EC9B0; /* Cyan color for function calls */
       text-decoration: none;
-      font-weight: normal; /* Keep it looking like code */
+      font-weight: normal; 
     }
     .nav-call:hover {
-      text-decoration: underline; /* Visual feedback on hover */
+      text-decoration: underline;
     }
 
     .line {
@@ -98,12 +116,26 @@
 <body>
   <div class="container">
     <!-- Profile Picture -->
-    <img src="cat.jpeg" alt="Profile Picture" class="profile-pic" />
+    <img src="profile.jpeg" alt="Profile Picture" class="profile-pic" />
 
-    <!-- Optional short intro / tagline -->
+    <!-- Name under the profile picture -->
+    <h1 class="name">Griffin Graham-Bennett</h1>
+
+    <!-- Optional short tagline or intro text -->
     <p class="intro-text">
-      I'm Griffin Graham-Bennett, a 4th year UofA programmer who makes things work... sometimes.
+      A passionate programmer who makes things work... sometimes.
     </p>
+
+    <!-- Social Links -->
+    <div class="social-links">
+      <!-- Replace these with your actual LinkedIn/GitHub URLs and icon paths -->
+      <a href="https://www.youtube.com/watch?v=rIXWUJ5U8bY" target="_blank">
+        <img src="linkedin-icon.png" alt="LinkedIn">
+      </a>
+      <a href="https://github.com/griffgb" target="_blank">
+        <img src="github-icon.png" alt="GitHub">
+      </a>
+    </div>
 
     <!-- Dark-themed code snippet -->
     <div class="code-block-dark">
@@ -119,7 +151,6 @@
   <span class="variable">let</span> interests = <span class="string">["Gaming", "Hiking", "Photography"]</span>;
 
   <span class="comment">// Navigation calls (click to explore)</span>
-  <a href="about.html" class="nav-call">About();</a>
   <a href="resume.html" class="nav-call">Resume();</a>
   <a href="education.html" class="nav-call">Education();</a>
   <a href="projects.html" class="nav-call">Projects();</a>
