@@ -4,12 +4,18 @@
   <meta charset="UTF-8" />
   <title>Griffin Graham-Bennett - Home</title>
   <style>
-    /* Basic resets */
+    /* 
+      1) DARK BACKGROUND:
+         Using a dark-gray background for the whole page to match the code block. 
+      2) LIGHT TEXT:
+         We'll use lighter text colors throughout for readability on dark backgrounds.
+    */
     html, body {
       margin: 0;
       padding: 0;
       font-family: Arial, sans-serif;
-      background: #ffffff; /* Body background can remain white or any color you like */
+      background: #2D2D2D; /* Dark background for entire page */
+      color: #D4D4D4;      /* Light text color by default */
     }
 
     .container {
@@ -19,33 +25,36 @@
       text-align: center;
     }
 
-    /* Profile picture styling */
+    /* ENLARGED PROFILE PICTURE */
     .profile-pic {
-      width: 120px;
-      height: 120px;
+      width: 160px;
+      height: 160px;
       border-radius: 50%;
       object-fit: cover;
       margin-bottom: 20px;
+      /* Optional border or box-shadow to make it pop */
+      border: 3px solid #444;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
     }
 
-    /* OPTIONAL: A heading or tagline above your code snippet */
+    /* A short intro or tagline above the code snippet */
     .intro-text {
-      color: #333;
       margin: 10px 0 20px 0;
       font-size: 1.1em;
+      /* Slightly lighter shade for contrast */
+      color: #CCCCCC;
     }
 
-    /* Dark-themed code block */
+    /* DARK-THEMED CODE BLOCK */
     .code-block-dark {
-      background-color: #1e1e1e; /* Typical VSCode background */
-      color: #d4d4d4; /* Light text */
+      background-color: #1E1E1E; /* Typical VS Code dark background */
+      color: #D4D4D4;           /* Light text */
       text-align: left;
       padding: 20px;
       border-radius: 5px;
-      font-family: Consolas, "Courier New", monospace; 
-      border: 1px solid #333; 
-      box-shadow: 0 2px 4px rgba(0,0,0,0.3);
-      /* Optionally give it some margin for breathing room */
+      font-family: Consolas, "Courier New", monospace;
+      border: 1px solid #333;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
       margin-top: 20px;
     }
 
@@ -65,13 +74,13 @@
       font-weight: bold;
     }
     .variable {
-      color: #dcdcaa; /* Yellowish for vars/keys */
+      color: #DCDC9A; /* Yellowish for vars/keys */
     }
     .string {
-      color: #ce9178; /* Reddish hue for strings */
+      color: #CE9178; /* Reddish hue for strings */
     }
 
-    /* Navigation links styled as code calls */
+    /* NAVIGATION INSIDE THE CODE BLOCK */
     .nav-call {
       color: #4EC9B0; /* Cyan color for function calls */
       text-decoration: none;
@@ -81,7 +90,6 @@
       text-decoration: underline; /* Visual feedback on hover */
     }
 
-    /* Slight spacing between lines where calls appear */
     .line {
       margin-bottom: 4px;
     }
@@ -89,13 +97,12 @@
 </head>
 <body>
   <div class="container">
-
     <!-- Profile Picture -->
-    <img src="profileSmall.jpeg" alt="Profile Picture" class="profile-pic" />
+    <img src="profile.jpeg" alt="Profile Picture" class="profile-pic" />
 
-    <!-- Optional small intro or tagline above the code snippet -->
+    <!-- Optional short intro / tagline -->
     <p class="intro-text">
-      I'm Griffin Graham-Bennett, a passionate programmer who makes things work... sometimes.
+      I'm Griffin Graham-Bennett, a 4th year UofA programmer who makes things work... sometimes.
     </p>
 
     <!-- Dark-themed code snippet -->
@@ -120,7 +127,6 @@
 &#125;
       </pre>
     </div>
-
   </div>
 </body>
 </html>
