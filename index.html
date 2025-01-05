@@ -11,6 +11,7 @@
       font-family: Arial, sans-serif;
       background: #2D2D2D; /* Dark background for entire page */
       color: #D4D4D4;      /* Light text color by default */
+      height: 100%;        /* Ensures footer can be positioned properly if needed */
     }
 
     .container {
@@ -46,18 +47,20 @@
       color: #CCCCCC;
     }
 
-    /* SOCIAL LINKS (LinkedIn, GitHub) */
+    /* SOCIAL LINKS (LinkedIn, GitHub, etc.) */
     .social-links {
       margin: 15px 0 30px 0; /* Spacing around icons */
     }
+
+    /* Updated icon sizes: let’s make them 40x40 */
     .social-links a {
       display: inline-block;
       margin: 0 10px;
     }
-    /* Example icon styling */
+
     .social-links img {
-      width: 32px;
-      height: 32px;
+      width: 40px;
+      height: 40px;
       transition: opacity 0.2s;
     }
     .social-links img:hover {
@@ -76,6 +79,7 @@
       box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
       margin-top: 20px;
     }
+
     .code-block-dark pre {
       margin: 0;
       line-height: 1.4;
@@ -108,15 +112,20 @@
       text-decoration: underline;
     }
 
-    .line {
-      margin-bottom: 4px;
+    /* FOOTER */
+    footer {
+      text-align: center;
+      color: #888; /* Slightly lighter or darker shade than main text */
+      padding: 10px 0;
+      margin-top: 30px;
+      font-size: 0.9em;
     }
   </style>
 </head>
 <body>
   <div class="container">
     <!-- Profile Picture -->
-    <img src="cat.jpeg" alt="Profile Picture" class="profile-pic" />
+    <img src="cat.jpg" alt="Profile Picture" class="profile-pic" />
 
     <!-- Name under the profile picture -->
     <h1 class="name">Griffin Graham-Bennett</h1>
@@ -129,12 +138,16 @@
     <!-- Social Links -->
     <div class="social-links">
       <!-- Replace these with your actual LinkedIn/GitHub URLs and icon paths -->
-      <a href="https://www.youtube.com/watch?v=rIXWUJ5U8bY" target="_blank">
+      <a href="https://www.linkedin.com/in/your-linkedin-profile" target="_blank">
         <img src="linkedin-icon.png" alt="LinkedIn">
       </a>
-      <a href="https://github.com/griffgb" target="_blank">
+      <a href="https://github.com/your-github-username" target="_blank">
         <img src="github-icon.png" alt="GitHub">
       </a>
+      <!-- Another Logo/Icon at the bottom of the two icons -->
+     
+        <img src="uofa.png" alt="Twitter">
+      
     </div>
 
     <!-- Dark-themed code snippet -->
@@ -159,5 +172,11 @@
       </pre>
     </div>
   </div>
+
+  <!-- COPYRIGHT FOOTER -->
+  <footer>
+    &copy; 2023 Griffin Graham-Bennett. All rights reserved.
+  </footer>
+
 </body>
 </html>
