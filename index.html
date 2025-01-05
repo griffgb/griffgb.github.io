@@ -1,105 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>My Portfolio - Home</title>
-  <!-- Link to external CSS file (optional) -->
-  <link rel="stylesheet" href="styles.css" />
+  <meta charset="UTF-8">
+  <title>Your Name - Home</title>
   <style>
-    /* If you prefer inline styles, you can put them here instead 
-       or remove this <style> block if using styles.css */
-    
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
-    }
-
-    header {
-      background-color: #333;
-      padding: 1rem;
-    }
-
-    nav ul {
-      list-style: none;
-      margin: 0;
       padding: 0;
+      background-color: #ffffff; /* White background */
+      font-family: Arial, sans-serif;
+      text-align: center; /* Center-align text */
+    }
+    .container {
       display: flex;
+      flex-direction: column;
+      justify-content: center;
+      height: 100vh; /* Full viewport height */
     }
-
-    nav li {
-      margin-right: 1rem;
+    h1 {
+      font-size: 3em;
+      margin: 0;
     }
-
+    p.tagline {
+      font-size: 1.2em;
+      color: #555555;
+      margin-top: 0.5em;
+    }
+    nav {
+      margin-top: 2em;
+    }
     nav a {
-      color: #fff;
+      margin: 0 15px;
       text-decoration: none;
-      font-weight: bold;
+      color: #007BFF; /* Blue color for links */
+      font-size: 1.1em;
     }
-
     nav a:hover {
       text-decoration: underline;
-    }
-
-    main {
-      max-width: 800px;
-      margin: 2rem auto;
-      padding: 0 1rem;
-      text-align: center;
-    }
-
-    #profile-pic {
-      width: 150px;
-      height: 150px;
-      object-fit: cover;
-      border-radius: 50%;
-      margin-bottom: 1rem;
-    }
-
-    footer {
-      text-align: center;
-      margin: 2rem 0;
-      color: #777;
     }
   </style>
 </head>
 <body>
-  <!-- Header / Nav Bar -->
-  <header>
+  <div class="container">
+    <h1>Your Name</h1>
+    <p class="tagline">A passionate software developer and lifelong learner.</p>
     <nav>
-      <ul>
-        <!-- Active page link goes to index.html again -->
-        <li><a href="index.html">Home</a></li>
-        <li><a href="projects.html">Projects</a></li>
-        <li><a href="education.html">Education</a></li>
-        <li><a href="resume.html">Resume</a></li>
-        <li><a href="contacts.html">Contacts</a></li>
-      </ul>
+      <a href="about.html">About</a>
+      <a href="resume.html">Resume</a>
+      <a href="education.html">Education</a>
+      <a href="projects.html">Projects</a>
+      <a href="contact.html">Contact</a>
     </nav>
-  </header>
-
-  <!-- Main Content -->
-  <main>
-    <!-- Profile Picture -->
-    <img
-      id="profile-pic"
-      src="images/cat.jpeg"
-      alt="Profile Picture"
-    />
-
-    <!-- About Me -->
-    <h1>About Me</h1>
-    <p>
-      Hi! I’m <strong>Griffin Graham-Bennett</strong>, a fourth-year Computer Science student attending Univeristy of Alberta.with a
-      passion for software development and all things tech. I love building
-      web applications, exploring new frameworks, and collaborating on
-      open-source projects. When I'm not coding, you can find me
-      reading novels or experimenting with new coffee brewing methods!
-    </p>
-  </main>
-
-  <!-- Footer -->
-  <footer>
-    <p>&copy; 2025 Your Name</p>
-  </footer>
+  </div>
 </body>
 </html>
