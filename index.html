@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>My Portfolio - Home</title>
+  <!-- Link to external CSS file (optional) -->
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    /* If you prefer inline styles, you can put them here instead 
+       or remove this <style> block if using styles.css */
+    
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    header {
+      background-color: #333;
+      padding: 1rem;
+    }
+
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+    }
+
+    nav li {
+      margin-right: 1rem;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    main {
+      max-width: 800px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+      text-align: center;
+    }
+
+    #profile-pic {
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 50%;
+      margin-bottom: 1rem;
+    }
+
+    footer {
+      text-align: center;
+      margin: 2rem 0;
+      color: #777;
+    }
+  </style>
+</head>
+<body>
+  <!-- Header / Nav Bar -->
+  <header>
+    <nav>
+      <ul>
+        <!-- Active page link goes to index.html again -->
+        <li><a href="index.html">Home</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="education.html">Education</a></li>
+        <li><a href="resume.html">Resume</a></li>
+        <li><a href="contacts.html">Contacts</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <!-- Profile Picture -->
+    <img
+      id="profile-pic"
+      src="images/cat.jpeg"
+      alt="Profile Picture"
+    />
+
+    <!-- About Me -->
+    <h1>About Me</h1>
+    <p>
+      Hi! I’m <strong>Griffin Graham-Bennett</strong>, a fourth-year Computer Science student attending Univeristy of Alberta.with a
+      passion for software development and all things tech. I love building
+      web applications, exploring new frameworks, and collaborating on
+      open-source projects. When I'm not coding, you can find me
+      reading novels or experimenting with new coffee brewing methods!
+    </p>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Your Name</p>
+  </footer>
+</body>
+</html>
