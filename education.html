@@ -2,29 +2,130 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>My Portfolio - Education</title>
-  <link rel="stylesheet" href="styles.css" />
+  <title>Griffin Graham-Bennett - Education</title>
+  <style>
+    /* DARK BACKGROUND & LIGHT TEXT */
+    html, body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background: #2D2D2D;
+      color: #D4D4D4;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .profile-pic {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 20px;
+      border: 3px solid #444;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+    }
+
+    h1.name {
+      font-size: 2em;
+      font-weight: bold;
+      margin: 0;
+      margin-bottom: 10px;
+    }
+
+    .intro-text {
+      margin: 0 0 20px 0;
+      font-size: 1.1em;
+      color: #CCCCCC;
+    }
+
+    .code-block-dark {
+      background-color: #1E1E1E; 
+      color: #D4D4D4;           
+      text-align: left;
+      padding: 20px;
+      border-radius: 5px;
+      font-family: Consolas, "Courier New", monospace;
+      border: 1px solid #333;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+      margin-top: 20px;
+    }
+
+    .code-block-dark pre {
+      margin: 0;
+      line-height: 1.4;
+      font-size: 14px;
+    }
+
+    .comment {
+      color: #6A9955;
+      font-style: italic;
+    }
+    .function-name {
+      color: #C586C0;
+      font-weight: bold;
+    }
+    .variable {
+      color: #DCDC9A;
+    }
+    .string {
+      color: #CE9178;
+    }
+
+    .nav-call {
+      color: #4EC9B0;
+      text-decoration: none;
+      font-weight: normal; 
+      margin-right: 10px;
+    }
+    .nav-call:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      text-align: center;
+      color: #888; 
+      padding: 10px 0;
+      margin-top: 30px;
+      font-size: 0.9em;
+    }
+  </style>
 </head>
 <body>
-  <header>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="projects.html">Projects</a></li>
-        <li><a href="education.html">Education</a></li>
-        <li><a href="resume.html">Resume</a></li>
-        <li><a href="contacts.html">Contacts</a></li>
-      </ul>
-    </nav>
-  </header>
+  <div class="container">
+    <img src="cat.jpeg" alt="Profile Picture" class="profile-pic" />
 
-  <main>
-    <h1>Education</h1>
-    <p>Mention your university, degree program, relevant coursework, etc.</p>
-  </main>
+    <h1 class="name">Griffin Graham-Bennett</h1>
+    <p class="intro-text">A passionate programmer who makes things work... sometimes.</p>
+
+    <div class="code-block-dark">
+      <pre>
+<span class="comment">/**
+ * Education Page
+ * List your degrees, certifications, etc.
+ */</span>
+
+<span class="function-name">function</span> EducationPage() &#123;
+  <span class="comment">// Example placeholders for your education info</span>
+  <span class="variable">let</span> degrees = <span class="string">["B.S. Computer Science", "M.S. Something"]</span>;
+  <span class="variable">let</span> certifications = <span class="string">["AWS Certified Cloud Practitioner"]</span>;
+
+  <span class="comment">// Navigation calls</span>
+  <a href="index.html" class="nav-call">Home();</a>
+  <a href="resume.html" class="nav-call">Resume();</a>
+  <a href="projects.html" class="nav-call">Projects();</a>
+  <a href="contact.html" class="nav-call">Contact();</a>
+&#125;
+      </pre>
+    </div>
+  </div>
 
   <footer>
-    <p>&copy; 2025 Your Name</p>
+    &copy; 2023 Griffin Graham-Bennett. All rights reserved.
   </footer>
 </body>
 </html>
