@@ -11,7 +11,6 @@
       font-family: Arial, sans-serif;
       background: #2D2D2D; /* Dark background for entire page */
       color: #D4D4D4;      /* Light text color by default */
-      height: 100%;        /* Ensures footer can be positioned properly if needed */
     }
 
     .container {
@@ -47,24 +46,34 @@
       color: #CCCCCC;
     }
 
-    /* SOCIAL LINKS (LinkedIn, GitHub, etc.) */
+    /* SOCIAL LINKS (LinkedIn, GitHub) */
     .social-links {
       margin: 15px 0 30px 0; /* Spacing around icons */
     }
 
-    /* Updated icon sizes: let’s make them 40x40 */
+    /* Updated icon sizes: let's make them 40x40 */
     .social-links a {
       display: inline-block;
       margin: 0 10px;
     }
 
-    .social-links img {
+    .social-links a img {
       width: 40px;
       height: 40px;
       transition: opacity 0.2s;
     }
-    .social-links img:hover {
+    .social-links a img:hover {
       opacity: 0.7; /* Subtle hover effect */
+    }
+
+    /* IMAGE BELOW ICONS */
+    .image-below {
+      margin-top: 15px; /* space above the new image */
+    }
+    .image-below img {
+      width: 60px;      /* adjust as needed */
+      height: 60px;     /* adjust as needed */
+      object-fit: cover; /* optional if you have a particular dimension */
     }
 
     /* CODE BLOCK (VS CODE THEME) */
@@ -115,7 +124,7 @@
     /* FOOTER */
     footer {
       text-align: center;
-      color: #888; /* Slightly lighter or darker shade than main text */
+      color: #888; 
       padding: 10px 0;
       margin-top: 30px;
       font-size: 0.9em;
@@ -125,7 +134,7 @@
 <body>
   <div class="container">
     <!-- Profile Picture -->
-    <img src="cat.jpg" alt="Profile Picture" class="profile-pic" />
+    <img src="cat.jpeg" alt="Profile Picture" class="profile-pic" />
 
     <!-- Name under the profile picture -->
     <h1 class="name">Griffin Graham-Bennett</h1>
@@ -137,17 +146,19 @@
 
     <!-- Social Links -->
     <div class="social-links">
-      <!-- Replace these with your actual LinkedIn/GitHub URLs and icon paths -->
+      <!-- LinkedIn Icon (Link) -->
       <a href="https://www.linkedin.com/in/your-linkedin-profile" target="_blank">
         <img src="linkedin-icon.png" alt="LinkedIn">
       </a>
+      <!-- GitHub Icon (Link) -->
       <a href="https://github.com/your-github-username" target="_blank">
         <img src="github-icon.png" alt="GitHub">
       </a>
-      <!-- Another Logo/Icon at the bottom of the two icons -->
-     
-        <img src="uofa.png" alt="Twitter">
-      
+
+      <!-- An image (NOT a link) below the icons -->
+      <div class="image-below">
+        <img src="uofa.png" alt="My Custom Image">
+      </div>
     </div>
 
     <!-- Dark-themed code snippet -->
@@ -177,6 +188,5 @@
   <footer>
     &copy; 2023 Griffin Graham-Bennett. All rights reserved.
   </footer>
-
 </body>
 </html>
