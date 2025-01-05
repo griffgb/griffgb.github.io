@@ -2,87 +2,86 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Your Name - Home</title>
+  <title>Griffin Graham-Bennett - Home</title>
   <style>
     body {
       margin: 0;
-      padding: 0;
-      background-color: #ffffff; /* White background */
+      padding: 20px;
+      background-color: #ffffff;
       font-family: Arial, sans-serif;
-      text-align: center; /* Center-align text */
     }
-
     .container {
-      display: flex;
-      flex-direction: column;
-      align-items: center; /* Center items horizontally */
-      /* Use margin-top to shift content above the center */
-      margin-top: 75px;
-      margin-bottom: 50px; 
+      max-width: 600px;
+      margin: 0 auto;
+      text-align: center;
     }
-
     /* Circle profile picture */
     .profile-pic {
-      width: 150px;
-      height: 150px;
+      width: 120px;
+      height: 120px;
       border-radius: 50%;
-      object-fit: cover; /* Ensure the image fits within the circle */
-      margin-bottom: 1em;
+      object-fit: cover;
+      margin-bottom: 20px;
     }
-
-    h1 {
-      font-size: 3em;
+    /* Code-like styling */
+    .code-block {
+      background-color: #f4f4f4;
+      text-align: left;
+      padding: 20px;
+      border-radius: 5px;
+      font-family: Consolas, "Courier New", monospace; /* A monospace font */
+    }
+    .code-block pre {
       margin: 0;
+      line-height: 1.4;
     }
-
-    p.tagline {
-      font-size: 1.2em;
-      color: #555555;
-      margin-top: 0.5em;
+    /* Slightly different color for function names or keywords */
+    .function-name {
+      color: #007BFF;
+      font-weight: bold;
     }
-    
-    /* Quote styling */
-    p.quote {
-      font-size: 1.1em;
-      color: #666666;
+    .comment {
+      color: #999999;
       font-style: italic;
-      margin: 0.5em 0 1.5em 0;
     }
-
-    nav {
-      margin-top: 1.5em;
-    }
-
-    /* Vertical nav: display each link as a block element */
-    nav a {
-      display: block;
-      margin: 0.5em 0;
+    /* Make the “calls” look like code, but are actually links */
+    .nav-link {
+      color: #333;
       text-decoration: none;
-      color: #333333;
-      font-size: 1.1em;
+      font-weight: bold;
+      transition: color 0.3s;
     }
-
-    nav a:hover {
+    .nav-link:hover {
       text-decoration: underline;
+      color: #007BFF;
+    }
+    /* Slight spacing below each "call" */
+    .nav-call {
+      margin-bottom: 5px;
     }
   </style>
 </head>
 <body>
   <div class="container">
-    <!-- Make sure "profile.jpg" is in the same folder as this HTML file, 
-         or update src if your file has a different name or path. -->
-    <img src="profileSmall.jpeg" alt="Profile Picture" class="profile-pic">
+    <!-- Profile picture -->
+    <img src="profileSmall.jpg" alt="Profile Picture" class="profile-pic">
 
-    <h1>/Griffin Graham-Bennett/</h1>
-    <p class="tagline">A passionate programmer who makes things work sometimes.</p>
-    
-    <nav>
-      <a href="about.html">About</a>
-      <a href="resume.html">Resume</a>
-      <a href="education.html">Education</a>
-      <a href="projects.html">Projects</a>
-      <a href="contact.html">Contact</a>
-    </nav>
+    <!-- Code-style container -->
+    <div class="code-block">
+      <pre>
+<span class="function-name">function</span> GriffinGrahamBennett() &#123;
+  <span class="comment">// A passionate programmer who makes things work... sometimes</span>
+&#125;
+</pre>
+      
+      <pre>
+<span class="nav-call"><a class="nav-link" href="about.html">About()</a>;</span>
+<span class="nav-call"><a class="nav-link" href="resume.html">Resume()</a>;</span>
+<span class="nav-call"><a class="nav-link" href="education.html">Education()</a>;</span>
+<span class="nav-call"><a class="nav-link" href="projects.html">Projects()</a>;</span>
+<span class="nav-call"><a class="nav-link" href="contact.html">Contact()</a>;</span>
+</pre>
+    </div>
   </div>
 </body>
 </html>
