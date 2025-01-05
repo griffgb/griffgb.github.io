@@ -15,7 +15,16 @@
       display: flex;
       flex-direction: column;
       justify-content: center;
+      align-items: center; /* Center items horizontally */
       height: 100vh; /* Full viewport height */
+    }
+    /* Circle profile picture */
+    .profile-pic {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover; /* Ensure the image fits within the circle */
+      margin-bottom: 1em;
     }
     h1 {
       font-size: 3em;
@@ -32,7 +41,8 @@
     nav a {
       margin: 0 15px;
       text-decoration: none;
-      color: #007BFF; /* Blue color for links */
+      /* Change the color to something other than blue */
+      color: #333333; 
       font-size: 1.1em;
     }
     nav a:hover {
@@ -42,7 +52,10 @@
 </head>
 <body>
   <div class="container">
-    <h1>Your Name</h1>
+    <!-- Profile Picture -->
+    <img src="images/cat.jpeg" alt="Profile Picture" class="profile-pic">
+
+    <h1>/Griffin Graham-Bennett/</h1>
     <p class="tagline">A passionate software developer and lifelong learner.</p>
     <nav>
       <a href="about.html">About</a>
