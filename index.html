@@ -48,10 +48,9 @@
 
     /* SOCIAL LINKS (LinkedIn, GitHub) */
     .social-links {
-      margin: 15px 0 30px 0; /* Spacing around icons */
+      margin: 15px 0 10px 0; /* Reduce bottom margin so the new image is closer */
     }
 
-    /* Updated icon sizes: let's make them 40x40 */
     .social-links a {
       display: inline-block;
       margin: 0 10px;
@@ -63,22 +62,31 @@
       transition: opacity 0.2s;
     }
     .social-links a img:hover {
-      opacity: 0.7; /* Subtle hover effect */
+      opacity: 0.7;
     }
 
     /* IMAGE BELOW ICONS */
     .image-below {
-      margin-top: 15px; /* space above the new image */
+      margin-top: 10px; /* Space above the new image */
+      margin-bottom: 0; /* Remove extra margin below to bring code snippet closer */
     }
+
+    /* Example: Make the image 100% wide, with a fixed height to look like a banner. 
+       Adjust as needed. */
     .image-below img {
-      width: 60px;      /* adjust as needed */
-      height: 60px;     /* adjust as needed */
-      object-fit: cover; /* optional if you have a particular dimension */
+      display: block;    /* So there's no extra space around the image */
+      width: 100%;       /* Occupies full container width */
+      max-width: 100%;   /* Ensures it doesn't exceed container width */
+      height: 250px;     /* "Longer" banner-like height (adjust as you want) */
+      object-fit: cover; /* Crop image if ratio doesn't match */
+      margin: 0 auto;    /* Center the image if narrower than container */
+      border: 2px solid #444;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
     }
 
     /* CODE BLOCK (VS CODE THEME) */
     .code-block-dark {
-      background-color: #1E1E1E; /* Typical VS Code dark background */
+      background-color: #1E1E1E; 
       color: #D4D4D4;           
       text-align: left;
       padding: 20px;
@@ -86,7 +94,9 @@
       font-family: Consolas, "Courier New", monospace;
       border: 1px solid #333;
       box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-      margin-top: 20px;
+
+      /* Bring the code snippet closer to the bottom of the new image */
+      margin-top: 15px; 
     }
 
     .code-block-dark pre {
@@ -124,7 +134,7 @@
     /* FOOTER */
     footer {
       text-align: center;
-      color: #888; 
+      color: #888;
       padding: 10px 0;
       margin-top: 30px;
       font-size: 0.9em;
@@ -134,7 +144,7 @@
 <body>
   <div class="container">
     <!-- Profile Picture -->
-    <img src="cat.jpeg" alt="Profile Picture" class="profile-pic" />
+    <img src="cat.jepg" alt="Profile Picture" class="profile-pic" />
 
     <!-- Name under the profile picture -->
     <h1 class="name">Griffin Graham-Bennett</h1>
@@ -157,6 +167,7 @@
 
       <!-- An image (NOT a link) below the icons -->
       <div class="image-below">
+        <!-- Example: a "banner" image with a longer height -->
         <img src="uofa.png" alt="My Custom Image">
       </div>
     </div>
