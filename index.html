@@ -11,13 +11,16 @@
       font-family: Arial, sans-serif;
       text-align: center; /* Center-align text */
     }
+
     .container {
       display: flex;
       flex-direction: column;
-      justify-content: center;
       align-items: center; /* Center items horizontally */
-      height: 100vh; /* Full viewport height */
+      /* Use margin-top to shift content above the center */
+      margin-top: 50px;
+      margin-bottom: 50px; 
     }
+
     /* Circle profile picture */
     .profile-pic {
       width: 150px;
@@ -26,25 +29,39 @@
       object-fit: cover; /* Ensure the image fits within the circle */
       margin-bottom: 1em;
     }
+
     h1 {
       font-size: 3em;
       margin: 0;
     }
+
     p.tagline {
       font-size: 1.2em;
       color: #555555;
       margin-top: 0.5em;
     }
-    nav {
-      margin-top: 2em;
+    
+    /* Quote styling */
+    p.quote {
+      font-size: 1.1em;
+      color: #666666;
+      font-style: italic;
+      margin: 0.5em 0 1.5em 0;
     }
+
+    nav {
+      margin-top: 1.5em;
+    }
+
+    /* Vertical nav: display each link as a block element */
     nav a {
-      margin: 0 15px;
+      display: block;
+      margin: 0.5em 0;
       text-decoration: none;
-      /* Change the color to something other than blue */
-      color: #333333; 
+      color: #333333;
       font-size: 1.1em;
     }
+
     nav a:hover {
       text-decoration: underline;
     }
@@ -52,11 +69,13 @@
 </head>
 <body>
   <div class="container">
-    <!-- Profile Picture -->
-    <img src="images/cat.jpeg" alt="Profile Picture" class="profile-pic">
+    <!-- Make sure "profile.jpg" is in the same folder as this HTML file, 
+         or update src if your file has a different name or path. -->
+    <img src="cat.jpeg" alt="Profile Picture" class="profile-pic">
 
     <h1>/Griffin Graham-Bennett/</h1>
-    <p class="tagline">A passionate software developer and lifelong learner.</p>
+    <p class="tagline">A passionate programmer who makes things work sometimes.</p>
+    
     <nav>
       <a href="about.html">About</a>
       <a href="resume.html">Resume</a>
