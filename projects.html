@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8">
   <title>Griffin Graham-Bennett - Projects</title>
   <style>
     /* DARK BACKGROUND & LIGHT TEXT */
@@ -14,7 +14,7 @@
     }
 
     .container {
-      max-width: 900px; /* Slightly wider for images & videos */
+      max-width: 900px;
       margin: 0 auto;
       padding: 20px;
       text-align: center;
@@ -24,9 +24,9 @@
       margin-top: 0;
     }
 
-    /* CODE BLOCK-LIKE BOX (VS CODE THEME) */
+    /* CODE BLOCK (VS CODE THEME) */
     .code-block-dark {
-      background-color: #1E1E1E; 
+      background-color: #1E1E1E;
       color: #D4D4D4;
       text-align: left;
       padding: 20px;
@@ -37,21 +37,31 @@
       margin-top: 20px;
     }
 
-    /* HEADINGS INSIDE .code-block-dark */
-    .code-block-dark h2 {
-      margin-top: 0;
+    /* The <pre> inside .code-block-dark for actual "code lines" */
+    .code-block-dark pre {
+      margin: 0 0 15px 0; /* space below the snippet */
+      line-height: 1.4;
+      font-size: 14px;
+      color: #D4D4D4;
+    }
+
+    /* Syntax-like colors */
+    .comment {
+      color: #6A9955; /* Greenish comment color */
+      font-style: italic;
+    }
+    .function-name {
+      color: #C586C0;
       font-weight: bold;
-      color: #C586C0; /* Purple-ish heading for style */
+    }
+    .variable {
+      color: #DCDC9A;
+    }
+    .string {
+      color: #CE9178;
     }
 
-    /* PARAGRAPHS IN CODE BLOCK */
-    .code-block-dark p {
-      margin: 10px 0;
-      font-family: Arial, sans-serif; /* Switch back to standard font for readability */
-      color: #CCCCCC;
-    }
-
-    /* NAV-LINKS (CALLS) */
+    /* NAV CALLS */
     .nav-call {
       color: #4EC9B0;
       text-decoration: none;
@@ -62,27 +72,27 @@
       text-decoration: underline;
     }
 
-    /* IMAGES (DISPLAYED SIDE-BY-SIDE) */
+    /* IMAGES (side-by-side screenshots, etc.) */
     .screenshot-gallery {
-      display: flex;        /* puts images side by side */
-      gap: 10px;            /* small space between */
-      margin: 20px 0;
-      justify-content: center; /* center them horizontally */
-      flex-wrap: wrap;      /* wrap if screen too narrow */
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      flex-wrap: wrap;   /* wrap on smaller screens */
+      margin: 15px 0;
     }
     .screenshot-gallery img {
-      width: 45%;           /* each image ~ half width */
-      max-width: 400px;     /* limit how big they get */
+      width: 45%;
+      max-width: 400px;
       border: 2px solid #444;
       border-radius: 5px;
-      object-fit: cover;    /* crop if aspect ratio differs */
+      object-fit: cover;
       box-shadow: 0 2px 6px rgba(0,0,0,0.5);
     }
 
-    /* MAIN IDEA / "HOW I CAME UP WITH IT" PICTURE */
+    /* Single image (idea image) */
     .idea-image {
       display: block;
-      margin: 20px auto;
+      margin: 15px auto;
       max-width: 70%;
       border: 2px solid #444;
       border-radius: 5px;
@@ -90,13 +100,13 @@
       object-fit: cover;
     }
 
-    /* VIDEOS NEXT TO EACH OTHER */
+    /* VIDEOS SIDE BY SIDE */
     .video-gallery {
       display: flex;
       gap: 10px;
       justify-content: center;
-      flex-wrap: wrap;      /* wrap on small screens */
-      margin: 20px 0;
+      flex-wrap: wrap;
+      margin: 15px 0;
     }
     .video-gallery video {
       width: 45%;
@@ -104,7 +114,15 @@
       border: 2px solid #444;
       border-radius: 5px;
       box-shadow: 0 2px 6px rgba(0,0,0,0.5);
-      background: #000;     /* fallback background */
+      background: #000; /* fallback background */
+    }
+
+    /* PARAGRAPHS BELOW THE CODE SNIPPET */
+    .project-description {
+      font-family: Arial, sans-serif;  /* for better readability than monospace */
+      color: #CCCCCC;
+      margin-bottom: 20px;
+      line-height: 1.5;
     }
 
     footer {
@@ -118,10 +136,8 @@
 </head>
 <body>
   <div class="container">
-    <!-- PAGE HEADING -->
     <h1>My Projects</h1>
-
-    <!-- OPTIONAL NAV CALLS AT THE TOP -->
+    <!-- (Optional) top navigation calls -->
     <p>
       <a href="index.html" class="nav-call">Home();</a>
       <a href="resume.html" class="nav-call">Resume();</a>
@@ -129,53 +145,85 @@
       <a href="contact.html" class="nav-call">Contact();</a>
     </p>
 
-    <!-- PROJECT 1: WEBSITE -->
+    <!-- PROJECT #1: WEBSITE -->
     <div class="code-block-dark">
-      <h2>Project: My Website</h2>
-      <!-- 1) Picture of how you came up with the idea -->
-      <img src="idea-website.png" alt="How I came up with the idea" class="idea-image">
+      <pre>
+<span class="comment">/**
+ * Project #1: My Website
+ * - A picture showing how I came up with it
+ * - Short description
+ * - Two screenshots
+ * - Another description & GitHub link
+ */</span>
 
-      <!-- 2) Description: Why I built it -->
-      <p>
-        I created this website to share my portfolio, practice front-end development, 
-        and experiment with UI/UX design. I wanted a place to showcase my skills 
-        beyond just GitHub readmes.
+<span class="function-name">function</span> WebsiteProject() &#123;
+  <span class="variable">let</span> idea = <span class="string">"Came from personal brainstorming sessions!"</span>;
+  <span class="variable">let</span> screenshots = <span class="string">["website-screenshot1.png", "website-screenshot2.png"]</span>;
+  <span class="variable">let</span> repoLink = <span class="string">"https://github.com/username/my-website"</span>;
+
+  <span class="comment">// Expand details below</span>
+&#125;
+      </pre>
+
+      <!-- Actual content: Idea image -->
+      <img src="idea-website.png" alt="How I came up with the website idea" class="idea-image">
+
+      <!-- Short description -->
+      <p class="project-description">
+        I created this website to share my portfolio and practice front-end development.
+        It also serves as a space to experiment with UI/UX design and showcase my skills 
+        beyond GitHub readmes.
       </p>
 
-      <!-- 3) Two screenshots of the actual website -->
+      <!-- Two screenshots side by side -->
       <div class="screenshot-gallery">
         <img src="website-screenshot1.png" alt="Website Screenshot 1">
         <img src="website-screenshot2.png" alt="Website Screenshot 2">
       </div>
 
-      <!-- 4) Another description & GitHub link -->
-      <p>
-        The site is built with HTML, CSS, and a bit of JavaScript for interactivity. 
-        Check out the code on 
+      <!-- Another description & link to GitHub code -->
+      <p class="project-description">
+        Built with HTML, CSS, and a bit of JavaScript for interactivity.
+        Check out the full source code on 
         <a href="https://github.com/username/my-website" class="nav-call" target="_blank">GitHub</a>.
       </p>
     </div>
 
-    <!-- PROJECT 2: APP -->
+    <!-- PROJECT #2: APP -->
     <div class="code-block-dark">
-      <h2>Project: My App</h2>
-      <!-- 1) Two videos side by side -->
+      <pre>
+<span class="comment">/**
+ * Project #2: My App
+ * - Two videos side by side
+ * - Description below
+ * - GitHub link
+ */</span>
+
+<span class="function-name">function</span> AppProject() &#123;
+  <span class="variable">let</span> videoDemos = <span class="string">["app-demo1.mp4", "app-demo2.mp4"]</span>;
+  <span class="variable">let</span> repoLink = <span class="string">"https://github.com/username/my-app"</span>;
+
+  <span class="comment">// Expand details below</span>
+&#125;
+      </pre>
+
+      <!-- Two videos side by side -->
       <div class="video-gallery">
-        <!-- For real usage, ensure the 'src' points to actual video files or streaming links -->
+        <!-- Update these src paths to real videos or streaming URLs -->
         <video src="app-demo1.mp4" controls></video>
         <video src="app-demo2.mp4" controls></video>
       </div>
 
-      <!-- 2) Description at the bottom -->
-      <p>
-        This mobile app was designed to solve a personal pain point. 
-        It helps keep track of daily tasks, organizes them into categories, 
-        and integrates with a simple back-end for sync. 
+      <!-- Description -->
+      <p class="project-description">
+        This mobile app helps keep track of daily tasks, organizes them, and integrates 
+        with a simple backend for sync. It addresses a personal pain point in staying 
+        productive, and gave me a chance to explore cross-platform development.
       </p>
 
-      <!-- 3) Link to the GitHub code -->
-      <p>
-        See the full source code here: 
+      <!-- GitHub link -->
+      <p class="project-description">
+        Explore the source code here: 
         <a href="https://github.com/username/my-app" class="nav-call" target="_blank">GitHub</a>
       </p>
     </div>
