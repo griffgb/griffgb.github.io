@@ -2,31 +2,110 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>My Portfolio - Contacts</title>
-  <link rel="stylesheet" href="styles.css" />
+  <title>Griffin Graham-Bennett - Contact</title>
+  <style>
+    /* DARK BACKGROUND & LIGHT TEXT */
+    html, body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background: #2D2D2D; /* Dark background for entire page */
+      color: #D4D4D4;      /* Light text color */
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+      text-align: center;
+    }
+
+    /* CODE BLOCK (VS CODE THEME) */
+    .code-block-dark {
+      background-color: #1E1E1E; 
+      color: #D4D4D4;           
+      text-align: left;
+      padding: 20px;
+      border-radius: 5px;
+      font-family: Consolas, "Courier New", monospace;
+      border: 1px solid #333;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+      margin-top: 20px;
+      display: inline-block; /* Keep the code block sized to content width */
+      text-align: left;
+    }
+
+    .code-block-dark pre {
+      margin: 0;
+      line-height: 1.4;
+      font-size: 14px;
+    }
+
+    /* SYNTAX HIGHLIGHTING */
+    .comment {
+      color: #6A9955; /* Greenish comment color */
+      font-style: italic;
+    }
+    .function-name {
+      color: #C586C0; /* Purple color */
+      font-weight: bold;
+    }
+    .variable {
+      color: #DCDC9A; /* Yellowish */
+    }
+    .string {
+      color: #CE9178; /* Reddish hue for strings */
+    }
+
+    /* NAVIGATION INSIDE THE CODE BLOCK */
+    .nav-call {
+      color: #4EC9B0; 
+      text-decoration: none;
+      font-weight: normal; 
+      margin-right: 10px;
+    }
+    .nav-call:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      text-align: center;
+      color: #888; 
+      padding: 10px 0;
+      margin-top: 30px;
+      font-size: 0.9em;
+    }
+  </style>
 </head>
 <body>
-  <header>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="projects.html">Projects</a></li>
-        <li><a href="education.html">Education</a></li>
-        <li><a href="resume.html">Resume</a></li>
-        <li><a href="contacts.html">Contacts</a></li>
-      </ul>
-    </nav>
-  </header>
+  <div class="container">
+    <!-- Code-themed contact info -->
+    <div class="code-block-dark">
+      <pre>
+<span class="comment">/**
+ * Contact Page
+ * Just my email - short & sweet!
+ */</span>
 
-  <main>
-    <h1>Contact Me</h1>
-    <p>Email: <a href="mailto:your.email@example.com">your.email@example.com</a></p>
-    <p>LinkedIn: <a href="#">linkedin.com/in/yourprofile</a></p>
-    <p>GitHub: <a href="https://github.com/yourusername" target="_blank">github.com/yourusername</a></p>
-  </main>
+<span class="function-name">function</span> ContactPage() &#123;
+    <span class="comment">// My contact details (email only)</span>
+    <span class="variable">let</span> email = 
+    <a href="mailto:griffin@example.com" class="string">"griffin@example.com"</a>;
 
+
+  <span class="comment">// Navigation calls</span>
+  <a href="index.html" class="nav-call">Home();</a>
+  <a href="resume.html" class="nav-call">Resume();</a>
+  <a href="education.html" class="nav-call">Education();</a>
+  <a href="projects.html" class="nav-call">Projects();</a>
+&#125;
+      </pre>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
   <footer>
-    <p>&copy; 2025 Your Name</p>
+    &copy; 2023 Griffin Graham-Bennett. All rights reserved.
   </footer>
 </body>
 </html>
