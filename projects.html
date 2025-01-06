@@ -2,34 +2,187 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>My Portfolio - Projects</title>
-  <link rel="stylesheet" href="styles.css" />
+  <title>Griffin Graham-Bennett - Projects</title>
+  <style>
+    /* DARK BACKGROUND & LIGHT TEXT */
+    html, body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background: #2D2D2D; /* Dark background for entire page */
+      color: #D4D4D4;      /* Light text color by default */
+    }
+
+    .container {
+      max-width: 900px; /* Slightly wider for images & videos */
+      margin: 0 auto;
+      padding: 20px;
+      text-align: center;
+    }
+
+    h1 {
+      margin-top: 0;
+    }
+
+    /* CODE BLOCK-LIKE BOX (VS CODE THEME) */
+    .code-block-dark {
+      background-color: #1E1E1E; 
+      color: #D4D4D4;
+      text-align: left;
+      padding: 20px;
+      border-radius: 5px;
+      font-family: Consolas, "Courier New", monospace;
+      border: 1px solid #333;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+      margin-top: 20px;
+    }
+
+    /* HEADINGS INSIDE .code-block-dark */
+    .code-block-dark h2 {
+      margin-top: 0;
+      font-weight: bold;
+      color: #C586C0; /* Purple-ish heading for style */
+    }
+
+    /* PARAGRAPHS IN CODE BLOCK */
+    .code-block-dark p {
+      margin: 10px 0;
+      font-family: Arial, sans-serif; /* Switch back to standard font for readability */
+      color: #CCCCCC;
+    }
+
+    /* NAV-LINKS (CALLS) */
+    .nav-call {
+      color: #4EC9B0;
+      text-decoration: none;
+      font-weight: normal;
+      margin-right: 10px;
+    }
+    .nav-call:hover {
+      text-decoration: underline;
+    }
+
+    /* IMAGES (DISPLAYED SIDE-BY-SIDE) */
+    .screenshot-gallery {
+      display: flex;        /* puts images side by side */
+      gap: 10px;            /* small space between */
+      margin: 20px 0;
+      justify-content: center; /* center them horizontally */
+      flex-wrap: wrap;      /* wrap if screen too narrow */
+    }
+    .screenshot-gallery img {
+      width: 45%;           /* each image ~ half width */
+      max-width: 400px;     /* limit how big they get */
+      border: 2px solid #444;
+      border-radius: 5px;
+      object-fit: cover;    /* crop if aspect ratio differs */
+      box-shadow: 0 2px 6px rgba(0,0,0,0.5);
+    }
+
+    /* MAIN IDEA / "HOW I CAME UP WITH IT" PICTURE */
+    .idea-image {
+      display: block;
+      margin: 20px auto;
+      max-width: 70%;
+      border: 2px solid #444;
+      border-radius: 5px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.5);
+      object-fit: cover;
+    }
+
+    /* VIDEOS NEXT TO EACH OTHER */
+    .video-gallery {
+      display: flex;
+      gap: 10px;
+      justify-content: center;
+      flex-wrap: wrap;      /* wrap on small screens */
+      margin: 20px 0;
+    }
+    .video-gallery video {
+      width: 45%;
+      max-width: 400px;
+      border: 2px solid #444;
+      border-radius: 5px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.5);
+      background: #000;     /* fallback background */
+    }
+
+    footer {
+      text-align: center;
+      color: #888; 
+      padding: 10px 0;
+      margin-top: 30px;
+      font-size: 0.9em;
+    }
+  </style>
 </head>
 <body>
-  <header>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="projects.html">Projects</a></li>
-        <li><a href="education.html">Education</a></li>
-        <li><a href="resume.html">Resume</a></li>
-        <li><a href="contacts.html">Contacts</a></li>
-      </ul>
-    </nav>
-  </header>
+  <div class="container">
+    <!-- PAGE HEADING -->
+    <h1>My Projects</h1>
 
-  <main>
-    <h1>Projects</h1>
-    <p>List or showcase your projects here!</p>
-    <!-- Example project structure -->
-    <section>
-      <h2>Project Name</h2>
-      <p>Short description of the project. Include links, screenshots, or GitHub repo links.</p>
-    </section>
-  </main>
+    <!-- OPTIONAL NAV CALLS AT THE TOP -->
+    <p>
+      <a href="index.html" class="nav-call">Home();</a>
+      <a href="resume.html" class="nav-call">Resume();</a>
+      <a href="education.html" class="nav-call">Education();</a>
+      <a href="contact.html" class="nav-call">Contact();</a>
+    </p>
+
+    <!-- PROJECT 1: WEBSITE -->
+    <div class="code-block-dark">
+      <h2>Project: My Website</h2>
+      <!-- 1) Picture of how you came up with the idea -->
+      <img src="idea-website.png" alt="How I came up with the idea" class="idea-image">
+
+      <!-- 2) Description: Why I built it -->
+      <p>
+        I created this website to share my portfolio, practice front-end development, 
+        and experiment with UI/UX design. I wanted a place to showcase my skills 
+        beyond just GitHub readmes.
+      </p>
+
+      <!-- 3) Two screenshots of the actual website -->
+      <div class="screenshot-gallery">
+        <img src="website-screenshot1.png" alt="Website Screenshot 1">
+        <img src="website-screenshot2.png" alt="Website Screenshot 2">
+      </div>
+
+      <!-- 4) Another description & GitHub link -->
+      <p>
+        The site is built with HTML, CSS, and a bit of JavaScript for interactivity. 
+        Check out the code on 
+        <a href="https://github.com/username/my-website" class="nav-call" target="_blank">GitHub</a>.
+      </p>
+    </div>
+
+    <!-- PROJECT 2: APP -->
+    <div class="code-block-dark">
+      <h2>Project: My App</h2>
+      <!-- 1) Two videos side by side -->
+      <div class="video-gallery">
+        <!-- For real usage, ensure the 'src' points to actual video files or streaming links -->
+        <video src="app-demo1.mp4" controls></video>
+        <video src="app-demo2.mp4" controls></video>
+      </div>
+
+      <!-- 2) Description at the bottom -->
+      <p>
+        This mobile app was designed to solve a personal pain point. 
+        It helps keep track of daily tasks, organizes them into categories, 
+        and integrates with a simple back-end for sync. 
+      </p>
+
+      <!-- 3) Link to the GitHub code -->
+      <p>
+        See the full source code here: 
+        <a href="https://github.com/username/my-app" class="nav-call" target="_blank">GitHub</a>
+      </p>
+    </div>
+  </div>
 
   <footer>
-    <p>&copy; 2025 Your Name</p>
+    &copy; 2023 Griffin Graham-Bennett. All rights reserved.
   </footer>
 </body>
 </html>
