@@ -1,32 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>My Portfolio - Resume</title>
-  <link rel="stylesheet" href="styles.css" />
+  <meta charset="UTF-8">
+  <title>Griffin Graham-Bennett - Resume</title>
+  <style>
+    /* DARK BACKGROUND & LIGHT TEXT */
+    html, body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background: #2D2D2D; /* Dark background for entire page */
+      color: #D4D4D4;      /* Light text color by default */
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+      text-align: center;
+    }
+
+    /* BOX (VS CODE THEME STYLING) */
+    .code-block-dark {
+      background-color: #1E1E1E; 
+      color: #D4D4D4;           
+      text-align: left;
+      padding: 20px;
+      border-radius: 5px;
+      border: 1px solid #333;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+      margin-top: 20px;
+    }
+
+    /* IF YOU WANT A SCROLLABLE EMBED */
+    .pdf-viewer {
+      width: 100%;
+      height: 800px; /* Adjust the height as needed */
+      border: none;  /* Removes default iframe border */
+    }
+
+    /* NAV-LINK STYLES (if you still want them) */
+    .nav-call {
+      color: #4EC9B0;
+      text-decoration: none;
+      font-weight: normal;
+      margin-right: 10px;
+    }
+    .nav-call:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      text-align: center;
+      color: #888; 
+      padding: 10px 0;
+      margin-top: 30px;
+      font-size: 0.9em;
+    }
+  </style>
 </head>
 <body>
-  <header>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="projects.html">Projects</a></li>
-        <li><a href="education.html">Education</a></li>
-        <li><a href="resume.html">Resume</a></li>
-        <li><a href="contacts.html">Contacts</a></li>
-      </ul>
-    </nav>
-  </header>
+  <div class="container">
+    <!-- You could keep a minimal heading, or omit it altogether -->
+    <h1>My Resume</h1>
 
-  <main>
-    <h1>Resume</h1>
-    <p>You can embed a PDF, link to a file, or copy-paste your resume details here.</p>
-    <!-- Example: Link to a PDF version of your resume -->
-    <p><a href="files/my_resume.pdf" target="_blank">Download Resume (PDF)</a></p>
-  </main>
+    <!-- Dark block containing the embedded PDF -->
+    <div class="code-block-dark">
+      <!-- Navigation calls at the top, if you like -->
+      <p>
+        <a href="index.html" class="nav-call">Home();</a>
+        <a href="education.html" class="nav-call">Education();</a>
+        <a href="projects.html" class="nav-call">Projects();</a>
+        <a href="contacts.html" class="nav-call">Contact();</a>
+      </p>
+
+      <!-- Embedded PDF -->
+      <iframe 
+        src="resume24.pdf" 
+        class="pdf-viewer"
+        title="Resume PDF">
+      </iframe>
+
+      <!-- Optionally, provide a direct download link below the embed -->
+      <p style="margin-top: 10px;">
+        <a href="resume.pdf" download class="nav-call">Download Resume</a>
+      </p>
+    </div>
+  </div>
 
   <footer>
-    <p>&copy; 2025 Your Name</p>
+    &copy; 2023 Griffin Graham-Bennett. All rights reserved.
   </footer>
 </body>
 </html>
