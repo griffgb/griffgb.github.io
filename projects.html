@@ -9,8 +9,8 @@
       margin: 0;
       padding: 0;
       font-family: Arial, sans-serif;
-      background: #2D2D2D; /* Dark background for entire page */
-      color: #D4D4D4;      /* Light text color by default */
+      background: #2D2D2D; /* Dark background */
+      color: #D4D4D4;      /* Light text color */
     }
 
     .container {
@@ -36,22 +36,19 @@
       box-shadow: 0 2px 4px rgba(0,0,0,0.3);
       margin-top: 20px;
     }
-
-    /* The <pre> inside .code-block-dark for actual "code lines" */
     .code-block-dark pre {
-      margin: 0 0 15px 0; /* space below the snippet */
+      margin: 0 0 15px 0; /* spacing below code snippet */
       line-height: 1.4;
       font-size: 14px;
-      color: #D4D4D4;
     }
 
     /* Syntax-like colors */
     .comment {
-      color: #6A9955; /* Greenish comment color */
+      color: #6A9955; 
       font-style: italic;
     }
     .function-name {
-      color: #C586C0;
+      color: #C586C0; 
       font-weight: bold;
     }
     .variable {
@@ -61,23 +58,21 @@
       color: #CE9178;
     }
 
-    /* NAV CALLS */
-    .nav-call {
-      color: #4EC9B0;
-      text-decoration: none;
-      font-weight: normal;
-      margin-right: 10px;
-    }
-    .nav-call:hover {
-      text-decoration: underline;
+    /* For actual images, text, etc. below the code snippet */
+    .project-description {
+      font-family: Arial, sans-serif;
+      color: #CCCCCC;
+      margin-bottom: 20px;
+      line-height: 1.5;
+      text-align: left; /* text easier to read left-aligned */
     }
 
-    /* IMAGES (side-by-side screenshots, etc.) */
+    /* GALLERIES / IMAGES */
     .screenshot-gallery {
       display: flex;
       justify-content: center;
       gap: 10px;
-      flex-wrap: wrap;   /* wrap on smaller screens */
+      flex-wrap: wrap;
       margin: 15px 0;
     }
     .screenshot-gallery img {
@@ -88,8 +83,6 @@
       object-fit: cover;
       box-shadow: 0 2px 6px rgba(0,0,0,0.5);
     }
-
-    /* Single image (idea image) */
     .idea-image {
       display: block;
       margin: 15px auto;
@@ -114,15 +107,18 @@
       border: 2px solid #444;
       border-radius: 5px;
       box-shadow: 0 2px 6px rgba(0,0,0,0.5);
-      background: #000; /* fallback background */
+      background: #000;
     }
 
-    /* PARAGRAPHS BELOW THE CODE SNIPPET */
-    .project-description {
-      font-family: Arial, sans-serif;  /* for better readability than monospace */
-      color: #CCCCCC;
-      margin-bottom: 20px;
-      line-height: 1.5;
+    /* NAV CALLS (CODE LINKS) */
+    .nav-call {
+      color: #4EC9B0; 
+      text-decoration: none;
+      font-weight: normal; 
+      margin-right: 10px;
+    }
+    .nav-call:hover {
+      text-decoration: underline;
     }
 
     footer {
@@ -137,54 +133,44 @@
 <body>
   <div class="container">
     <h1>My Projects</h1>
-    <!-- (Optional) top navigation calls -->
-    <p>
-      <a href="index.html" class="nav-call">Home();</a>
-      <a href="resume.html" class="nav-call">Resume();</a>
-      <a href="education.html" class="nav-call">Education();</a>
-      <a href="contact.html" class="nav-call">Contact();</a>
-    </p>
 
     <!-- PROJECT #1: WEBSITE -->
     <div class="code-block-dark">
       <pre>
 <span class="comment">/**
  * Project #1: My Website
- * - A picture showing how I came up with it
+ * - Idea image
  * - Short description
  * - Two screenshots
  * - Another description & GitHub link
  */</span>
 
 <span class="function-name">function</span> WebsiteProject() &#123;
-  <span class="variable">let</span> idea = <span class="string">"Came from personal brainstorming sessions!"</span>;
+  <span class="variable">let</span> idea = <span class="string">"Came from personal brainstorming!"</span>;
   <span class="variable">let</span> screenshots = <span class="string">["website-screenshot1.png", "website-screenshot2.png"]</span>;
   <span class="variable">let</span> repoLink = <span class="string">"https://github.com/username/my-website"</span>;
 
-  <span class="comment">// Expand details below</span>
+  <span class="comment">// See final result below</span>
 &#125;
       </pre>
 
-      <!-- Actual content: Idea image -->
+      <!-- Real content for Project 1 -->
       <img src="idea-website.png" alt="How I came up with the website idea" class="idea-image">
 
-      <!-- Short description -->
       <p class="project-description">
         I created this website to share my portfolio and practice front-end development.
         It also serves as a space to experiment with UI/UX design and showcase my skills 
         beyond GitHub readmes.
       </p>
 
-      <!-- Two screenshots side by side -->
       <div class="screenshot-gallery">
         <img src="website-screenshot1.png" alt="Website Screenshot 1">
         <img src="website-screenshot2.png" alt="Website Screenshot 2">
       </div>
 
-      <!-- Another description & link to GitHub code -->
       <p class="project-description">
         Built with HTML, CSS, and a bit of JavaScript for interactivity.
-        Check out the full source code on 
+        Check out the full source code on
         <a href="https://github.com/username/my-website" class="nav-call" target="_blank">GitHub</a>.
       </p>
     </div>
@@ -194,8 +180,8 @@
       <pre>
 <span class="comment">/**
  * Project #2: My App
- * - Two videos side by side
- * - Description below
+ * - Two demo videos side by side
+ * - Description
  * - GitHub link
  */</span>
 
@@ -203,29 +189,44 @@
   <span class="variable">let</span> videoDemos = <span class="string">["app-demo1.mp4", "app-demo2.mp4"]</span>;
   <span class="variable">let</span> repoLink = <span class="string">"https://github.com/username/my-app"</span>;
 
-  <span class="comment">// Expand details below</span>
+  <span class="comment">// See final result below</span>
 &#125;
       </pre>
 
-      <!-- Two videos side by side -->
+      <!-- Real content for Project 2 -->
       <div class="video-gallery">
-        <!-- Update these src paths to real videos or streaming URLs -->
         <video src="app-demo1.mp4" controls></video>
         <video src="app-demo2.mp4" controls></video>
       </div>
 
-      <!-- Description -->
       <p class="project-description">
         This mobile app helps keep track of daily tasks, organizes them, and integrates 
         with a simple backend for sync. It addresses a personal pain point in staying 
         productive, and gave me a chance to explore cross-platform development.
       </p>
 
-      <!-- GitHub link -->
       <p class="project-description">
         Explore the source code here: 
         <a href="https://github.com/username/my-app" class="nav-call" target="_blank">GitHub</a>
       </p>
+    </div>
+
+    <!-- CODE-STYLE NAVIGATION (PLACED AT THE BOTTOM) -->
+    <div class="code-block-dark">
+      <pre>
+<span class="comment">/**
+ * Navigation
+ * Explore other pages
+ */</span>
+
+<span class="function-name">function</span> SiteNavigation() &#123;
+  <span class="comment">// Click these calls to jump around</span>
+  <a href="index.html" class="nav-call">Home();</a>
+  <a href="resume.html" class="nav-call">Resume();</a>
+  <a href="education.html" class="nav-call">Education();</a>
+  <a href="contact.html" class="nav-call">Contact();</a>
+&#125;
+      </pre>
     </div>
   </div>
 
