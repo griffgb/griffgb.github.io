@@ -12,14 +12,12 @@
       background: #2D2D2D;
       color: #D4D4D4;
     }
-
     .container {
       max-width: 800px;
       margin: 0 auto;
       padding: 20px;
       text-align: center;
     }
-
     .profile-pic {
       width: 160px;
       height: 160px;
@@ -29,20 +27,19 @@
       border: 3px solid #444;
       box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
     }
-
     h1.name {
       font-size: 2em;
       font-weight: bold;
       margin: 0;
       margin-bottom: 10px;
     }
-
     .intro-text {
       margin: 0 0 20px 0;
       font-size: 1.1em;
       color: #CCCCCC;
     }
 
+    /* CODE BLOCK (VS CODE THEME) */
     .code-block-dark {
       background-color: #1E1E1E; 
       color: #D4D4D4;           
@@ -54,13 +51,13 @@
       box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
       margin-top: 20px;
     }
-
     .code-block-dark pre {
       margin: 0;
       line-height: 1.4;
       font-size: 14px;
     }
 
+    /* SYNTAX HIGHLIGHTING */
     .comment {
       color: #6A9955;
       font-style: italic;
@@ -76,10 +73,11 @@
       color: #CE9178;
     }
 
+    /* NAV CALLS */
     .nav-call {
       color: #4EC9B0;
       text-decoration: none;
-      font-weight: normal; 
+      font-weight: normal;
       margin-right: 10px;
     }
     .nav-call:hover {
@@ -88,7 +86,7 @@
 
     footer {
       text-align: center;
-      color: #888; 
+      color: #888;
       padding: 10px 0;
       margin-top: 30px;
       font-size: 0.9em;
@@ -97,22 +95,48 @@
 </head>
 <body>
   <div class="container">
-    <img src="cat.jpeg" alt="Profile Picture" class="profile-pic" />
-
+    <img src="profile.jpg" alt="Profile Picture" class="profile-pic" />
     <h1 class="name">Griffin Graham-Bennett</h1>
     <p class="intro-text">A passionate programmer who makes things work... sometimes.</p>
 
+    <!-- CODE BLOCK CONTAINING EDUCATION DETAILS -->
     <div class="code-block-dark">
       <pre>
 <span class="comment">/**
  * Education Page
- * List your degrees, certifications, etc.
+ * Classes I've Taken (with short descriptions in comments)
  */</span>
 
 <span class="function-name">function</span> EducationPage() &#123;
-  <span class="comment">// Example placeholders for your education info</span>
-  <span class="variable">let</span> degrees = <span class="string">["B.S. Computer Science", "M.S. Something"]</span>;
-  <span class="variable">let</span> certifications = <span class="string">["AWS Certified Cloud Practitioner"]</span>;
+  <span class="comment">// My degrees or overall summary here</span>
+  <span class="variable">let</span> degree = <span class="string">"B.S. in Computer Science"</span>;
+
+  <span class="comment">// Detailed class info as an array of objects (or strings)</span>
+  <span class="variable">let</span> classes = [
+    <span class="comment">
+    // Introduction to Programming
+    // Learned fundamental syntax, data types, basic algorithms, etc.
+    </span>
+    <span class="string">"CS101: Introduction to Programming"</span>,
+
+    <span class="comment">
+    // Data Structures & Algorithms
+    // Covered lists, stacks, queues, sorting and searching algorithms.
+    </span>
+    <span class="string">"CS201: Data Structures & Algorithms"</span>,
+
+    <span class="comment">
+    // Databases
+    // Focused on SQL, relational models, and normalization.
+    </span>
+    <span class="string">"CS301: Databases"</span>,
+
+    <span class="comment">
+    // Operating Systems
+    // Explored process scheduling, memory management, concurrency, etc.
+    </span>
+    <span class="string">"CS401: Operating Systems"</span>
+  ];
 
   <span class="comment">// Navigation calls</span>
   <a href="index.html" class="nav-call">Home();</a>
@@ -123,7 +147,6 @@
       </pre>
     </div>
   </div>
-
   <footer>
     &copy; 2023 Griffin Graham-Bennett. All rights reserved.
   </footer>
