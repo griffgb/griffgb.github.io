@@ -2,7 +2,6 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Griffin Graham-Bennett - Resume</title>
   <style>
     /* DARK BACKGROUND & LIGHT TEXT */
     html, body {
@@ -20,6 +19,10 @@
       text-align: center;
     }
 
+    h1 {
+      margin-top: 0;
+    }
+
     /* BOX (VS CODE THEME STYLING) */
     .code-block-dark {
       background-color: #1E1E1E; 
@@ -30,16 +33,45 @@
       border: 1px solid #333;
       box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
       margin-top: 20px;
+      font-family: Consolas, "Courier New", monospace; /* Monospace for code look */
     }
 
-    /* IF YOU WANT A SCROLLABLE EMBED */
+    /* The <pre> inside .code-block-dark for code-like text */
+    .code-block-dark pre {
+      margin: 0 0 15px 0;
+      line-height: 1.4;
+      font-size: 14px;
+      color: #D4D4D4;
+    }
+
+    /* Syntax-like styling */
+    .comment {
+      color: #6A9955; /* Greenish comment color */
+      font-style: italic;
+    }
+    .function-name {
+      color: #C586C0; /* Purple color */
+      font-weight: bold;
+    }
+    .variable {
+      color: #DCDC9A;
+    }
+    .string {
+      color: #CE9178;
+    }
+
+    /* PDF VIEWER */
     .pdf-viewer {
       width: 100%;
       height: 800px; /* Adjust the height as needed */
       border: none;  /* Removes default iframe border */
+      display: block; 
+      margin: 0 auto;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+      background: #000; /* fallback background if PDF can't load */
     }
 
-    /* NAV-LINK STYLES (if you still want them) */
+    /* NAV-LINK STYLES (CODE CALLS) */
     .nav-call {
       color: #4EC9B0;
       text-decoration: none;
@@ -61,18 +93,20 @@
 </head>
 <body>
   <div class="container">
-    <!-- You could keep a minimal heading, or omit it altogether -->
     <h1>Resume</h1>
 
-    <!-- Dark block containing the embedded PDF -->
+    <!-- CODE-BLOCK CONTAINING THE EMBEDDED PDF -->
     <div class="code-block-dark">
-      <!-- Navigation calls at the top, if you like -->
-      <p>
-        <a href="index.html" class="nav-call">Home();</a>
-        <a href="education.html" class="nav-call">Education();</a>
-        <a href="projects.html" class="nav-call">Projects();</a>
-        <a href="contacts.html" class="nav-call">Contact();</a>
-      </p>
+      <pre>
+<span class="comment">/**
+ * Resume Page
+ * Embedded PDF
+ */</span>
+
+<span class="function-name">function</span> ResumePage() &#123;
+  <span class="comment">// Below is my PDF viewer</span>
+&#125;
+      </pre>
 
       <!-- Embedded PDF -->
       <iframe 
@@ -80,7 +114,23 @@
         class="pdf-viewer"
         title="Resume PDF">
       </iframe>
+    </div>
 
+    <!-- CODE-BLOCK FOR NAVIGATION (AT THE BOTTOM) -->
+    <div class="code-block-dark">
+      <pre>
+<span class="comment">/**
+ * Navigation
+ * Jump to other pages
+ */</span>
+
+<span class="function-name">function</span> SiteNavigation() &#123;
+  <a href="index.html" class="nav-call">Home();</a>
+  <a href="education.html" class="nav-call">Education();</a>
+  <a href="projects.html" class="nav-call">Projects();</a>
+  <a href="contact.html" class="nav-call">Contact();</a>
+&#125;
+      </pre>
     </div>
   </div>
 
