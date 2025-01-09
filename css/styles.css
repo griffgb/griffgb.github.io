@@ -215,19 +215,19 @@ h1.name {
     flex-wrap: wrap;             /* Allow wrapping on smaller screens */
   }
   
-  .video-gallery video {
-    width: 45%;                  /* Each video takes up 45% of the container width */
-    max-width: 400px;            /* Set a maximum width for larger screens */
-    border: 2px solid #444;      /* Add a border for styling */
-    border-radius: 5px;          /* Rounded corners */
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5); /* Subtle shadow */
-    background-color: #000;      /* Background color for fallback */
-  }
+ 
 
-  .video-gallery img {
-    width: 100%; /* Adjust to match the video's size */
-    height: auto; /* Maintain aspect ratio */
-    border-radius: 8px; /* Optional: Add rounded corners */
+.video-gallery {
+  display: flex;
+  justify-content: space-between; /* Ensures even spacing between elements */
+  align-items: center; /* Aligns video and image vertically */
+  gap: 20px; /* Adds spacing between the video and image */
 }
 
-  
+.video-gallery video,
+.video-gallery img {
+  width: 48%; /* Adjusts width so they fit side-by-side */
+  border-radius: 8px; /* Optional: Adds rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Adds a subtle shadow */
+}
+
