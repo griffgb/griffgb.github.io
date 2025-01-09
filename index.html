@@ -9,10 +9,76 @@
       margin: 0;
       padding: 0;
       font-family: Arial, sans-serif;
-      background: #2D2D2D; /* Dark background for entire page */
-      color: #D4D4D4;      /* Light text color by default */
+      background: #2D2D2D; /* Dark background */
+      color: #D4D4D4;      /* Light text color */
     }
 
+    /* TOP BAR (HEADER) */
+    .topbar {
+      display: flex;
+      justify-content: space-between; 
+      align-items: center;
+      background-color: #1E1E1E;  /* Darker bar */
+      padding: 10px 20px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.5);
+    }
+    .topbar .logo {
+      font-size: 1.2em;
+      font-weight: bold;
+      color: #D4D4D4; /* or #4EC9B0 if you'd like a highlight color */
+      margin: 0;
+    }
+    
+    /* DROPDOWN MENU */
+    .dropdown {
+      position: relative; /* to contain the absolute-positioned menu */
+      display: inline-block;
+    }
+    .dropbtn {
+      background-color: #4EC9B0; /* Button color */
+      color: #1E1E1E;
+      padding: 8px 16px;
+      font-size: 1em;
+      border: none;
+      border-radius: 3px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+    .dropbtn:hover {
+      opacity: 0.8;
+    }
+    .dropdown-content {
+      display: none; /* Hidden by default */
+      position: absolute;
+      right: 0; /* Align dropdown on the right side */
+      background-color: #1E1E1E; /* Same color as top bar or code block */
+      min-width: 120px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.5);
+      border: 1px solid #333;
+      border-radius: 3px;
+      z-index: 5;
+    }
+    .dropdown-content a {
+      color: #4EC9B0; 
+      text-decoration: none;
+      display: block;
+      padding: 10px;
+      font-family: Consolas, "Courier New", monospace; /* Code-like font */
+      font-size: 0.9em;
+      border-bottom: 1px solid #333;
+    }
+    .dropdown-content a:last-child {
+      border-bottom: none; 
+    }
+    .dropdown-content a:hover {
+      background-color: #333;
+      text-decoration: underline;
+    }
+    .show {
+      display: block; /* Toggle to show/hide */
+    }
+
+    /* MAIN CONTAINER */
     .container {
       max-width: 800px;
       margin: 0 auto;
@@ -48,14 +114,12 @@
 
     /* SOCIAL LINKS (LinkedIn, GitHub) */
     .social-links {
-      margin: 15px 0 10px 0; /* slight bottom margin before the new image */
+      margin: 15px 0 10px 0; 
     }
-
     .social-links a {
       display: inline-block;
       margin: 0 10px;
     }
-
     .social-links a img {
       width: 40px;
       height: 40px;
@@ -67,17 +131,16 @@
 
     /* IMAGE BELOW ICONS */
     .image-below {
-      margin-top: 10px;  /* Space above the new image */
-      margin-bottom: 0;  /* Remove extra margin below to bring code snippet closer */
+      margin-top: 10px; 
+      margin-bottom: 0; 
     }
     .image-below img {
       display: block;
-      /* A more modest size for the "banner" */
-      width: 70%;          /* or try a fixed width like 600px */
-      max-width: 600px;    /* ensures it doesn't exceed 600px */
-      height: 105px;       /* modest height */
-      object-fit: cover;   /* crops if aspect ratio doesn't match */
-      margin: 0 auto;      /* centers the image */
+      width: 70%;
+      max-width: 600px;
+      height: 105px;
+      object-fit: cover;
+      margin: 0 auto; 
       border: 2px solid #444;
       box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
     }
@@ -93,9 +156,8 @@
       border: 1px solid #333;
       box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 
-      margin-top: 15px; /* closer to the image */
+      margin-top: 15px; 
     }
-
     .code-block-dark pre {
       margin: 0;
       line-height: 1.4;
@@ -104,23 +166,23 @@
 
     /* SYNTAX HIGHLIGHTING */
     .comment {
-      color: #6A9955; /* Greenish comment color */
+      color: #6A9955; 
       font-style: italic;
     }
     .function-name {
-      color: #C586C0; /* Purple color */
+      color: #C586C0; 
       font-weight: bold;
     }
     .variable {
-      color: #DCDC9A; /* Yellowish for vars/keys */
+      color: #DCDC9A; 
     }
     .string {
-      color: #CE9178; /* Reddish hue for strings */
+      color: #CE9178; 
     }
 
     /* NAVIGATION INSIDE THE CODE BLOCK */
     .nav-call {
-      color: #4EC9B0; /* Cyan color for function calls */
+      color: #4EC9B0; 
       text-decoration: none;
       font-weight: normal; 
     }
@@ -139,6 +201,21 @@
   </style>
 </head>
 <body>
+  <!-- TOP BAR WITH LOGO ON LEFT, DROPDOWN BUTTON ON RIGHT -->
+  <div class="topbar">
+    <h2 class="logo">GGB</h2>
+    <div class="dropdown">
+      <button class="dropbtn" onclick="toggleDropdown()">Menu</button>
+      <div class="dropdown-content" id="myDropdown">
+        <!-- Same links as code nav but clickable for quick access -->
+        <a href="resume.html">Resume()</a>
+        <a href="education.html">Education()</a>
+        <a href="projects.html">Projects()</a>
+        <a href="contact.html">Contact()</a>
+      </div>
+    </div>
+  </div>
+
   <div class="container">
     <!-- Profile Picture -->
     <img src="cat.jpeg" alt="Profile Picture" class="profile-pic" />
@@ -173,8 +250,8 @@
       <pre>
 <span class="comment">/**
  * Griffin Graham-Bennett
- * A fourth-year Computer Science student at the Univeristy of Alberta
- * Excited to apply my knowledge and skills to real-world challenges 
+ * A fourth-year Computer Science student at the University of Alberta
+ * Excited to apply my knowledge and skills to real-world challenges
  */</span>
 
 <span class="function-name">function</span> GriffinGrahamBennett() &#123;
@@ -186,7 +263,7 @@
   <a href="resume.html" class="nav-call">Resume();</a>
   <a href="education.html" class="nav-call">Education();</a>
   <a href="projects.html" class="nav-call">Projects();</a>
-  <a href="contacts.html" class="nav-call">Contact();</a>
+  <a href="contact.html" class="nav-call">Contact();</a>
 &#125;
       </pre>
     </div>
@@ -196,5 +273,22 @@
   <footer>
     &copy; 2025 Griffin Graham-Bennett. All rights reserved.
   </footer>
+
+  <!-- TOGGLE SCRIPT FOR THE DROPDOWN MENU -->
+  <script>
+    function toggleDropdown() {
+      document.getElementById("myDropdown").classList.toggle("show");
+    }
+
+    // Close the dropdown if the user clicks outside of it
+    window.onclick = function(event) {
+      if (!event.target.matches('.dropbtn')) {
+        var dropdown = document.getElementById("myDropdown");
+        if (dropdown.classList.contains('show')) {
+          dropdown.classList.remove('show');
+        }
+      }
+    }
+  </script>
 </body>
 </html>
