@@ -1,0 +1,208 @@
+/* -----------------------
+   1) BASE & FONT IMPORTS
+------------------------ */
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400&display=swap');
+
+/* Dark background & light text throughout */
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background: #2D2D2D; /* Dark background */
+  color: #D4D4D4;      /* Light text color */
+}
+
+/* For easy page containers */
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+}
+
+/* -----------------------
+   2) TOP BAR / HEADER
+------------------------ */
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #1E1E1E;
+  padding: 10px 20px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.5);
+}
+
+/* Code-like font for page titles */
+.topbar .title {
+  font-family: 'Fira Code', monospace; 
+  font-size: 1.5em;
+  color: #4EC9B0; /* highlight color */
+  margin: 0;
+}
+
+/* Dropdown container */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+/* Dropdown button */
+.dropbtn {
+  background-color: #4EC9B0; 
+  color: #1E1E1E;
+  padding: 8px 16px;
+  font-size: 1em;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  font-weight: bold;
+  font-family: 'Fira Code', monospace;
+}
+.dropbtn:hover {
+  opacity: 0.8;
+}
+/* Dropdown menu itself */
+.dropdown-content {
+  display: none; /* hidden by default */
+  position: absolute;
+  right: 0;
+  background-color: #1E1E1E;
+  min-width: 130px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.5);
+  border: 1px solid #333;
+  border-radius: 3px;
+  z-index: 5;
+}
+.dropdown-content a {
+  color: #4EC9B0; 
+  text-decoration: none;
+  display: block;
+  padding: 10px;
+  font-family: Consolas, "Courier New", monospace;
+  font-size: 0.9em;
+  border-bottom: 1px solid #333;
+}
+.dropdown-content a:last-child {
+  border-bottom: none;
+}
+.dropdown-content a:hover {
+  background-color: #333;
+  text-decoration: underline;
+}
+/* Show class toggled by JS */
+.show {
+  display: block;
+}
+
+/* -----------------------
+   3) FOOTER
+------------------------ */
+footer {
+  text-align: center;
+  color: #888;
+  padding: 10px 0;
+  margin-top: 30px;
+  font-size: 0.9em;
+}
+
+/* -----------------------
+   4) SHARED ELEMENTS / STYLES
+------------------------ */
+/* Profile pictures, etc. */
+.profile-pic {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 20px;
+  border: 3px solid #444;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+}
+h1.name {
+  font-size: 2em;
+  font-weight: bold;
+  margin: 0;
+  margin-bottom: 10px;
+}
+.intro-text {
+  margin: 0 0 20px 0;
+  font-size: 1.1em;
+  color: #CCCCCC;
+}
+
+/* Social link icons */
+.social-links {
+  margin: 15px 0 10px 0; 
+}
+.social-links a {
+  display: inline-block;
+  margin: 0 10px;
+}
+.social-links a img {
+  width: 40px;
+  height: 40px;
+  transition: opacity 0.2s;
+}
+.social-links a img:hover {
+  opacity: 0.7;
+}
+
+/* Example banner image below icons */
+.image-below {
+  margin-top: 10px; 
+  margin-bottom: 0; 
+}
+.image-below img {
+  display: block;
+  width: 70%;
+  max-width: 600px;
+  height: 105px;
+  object-fit: cover;
+  margin: 0 auto; 
+  border: 2px solid #444;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.5);
+}
+
+/* -----------------------
+   5) CODE BLOCK (VS CODE THEME)
+------------------------ */
+.code-block-dark {
+  background-color: #1E1E1E; 
+  color: #D4D4D4;
+  text-align: left;
+  padding: 20px;
+  border-radius: 5px;
+  font-family: Consolas, "Courier New", monospace;
+  border: 1px solid #333;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  margin-top: 20px; 
+}
+.code-block-dark pre {
+  margin: 0;
+  line-height: 1.4;
+  font-size: 14px;
+}
+/* Syntax highlighting */
+.comment {
+  color: #6A9955; 
+  font-style: italic;
+}
+.function-name {
+  color: #C586C0; 
+  font-weight: bold;
+}
+.variable {
+  color: #DCDC9A; 
+}
+.string {
+  color: #CE9178; 
+}
+/* Nav calls inside code snippet */
+.nav-call {
+  color: #4EC9B0; 
+  text-decoration: none;
+  font-weight: normal; 
+  margin-right: 10px;
+}
+.nav-call:hover {
+  text-decoration: underline;
+}

@@ -3,257 +3,49 @@
 <head>
   <meta charset="UTF-8" />
   <title>Griffin Graham-Bennett - Home</title>
-
-  <!-- OPTIONAL: Import a code-like font (Fira Code) for consistency -->
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400&display=swap');
-  </style>
-
-  <style>
-    /* DARK BACKGROUND & LIGHT TEXT */
-    html, body {
-      margin: 0;
-      padding: 0;
-      font-family: Arial, sans-serif;
-      background: #2D2D2D; /* Dark background */
-      color: #D4D4D4;      /* Light text color */
-    }
-
-    /* TOP BAR (HEADER) */
-    .topbar {
-      display: flex;
-      justify-content: space-between; 
-      align-items: center;
-      background-color: #1E1E1E;  /* Darker bar */
-      padding: 10px 20px;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.5);
-    }
-
-    /* "Home" title in a code-like font */
-    .topbar .title {
-      font-family: 'Fira Code', monospace; /* Code-like font */
-      font-size: 1.5em;
-      color: #4EC9B0; /* A highlight color */
-      margin: 0;
-    }
-
-    /* DROPDOWN MENU */
-    .dropdown {
-      position: relative; /* to contain the absolute-positioned menu */
-      display: inline-block;
-    }
-    .dropbtn {
-      background-color: #4EC9B0; /* Button color */
-      color: #1E1E1E;
-      padding: 8px 16px;
-      font-size: 1em;
-      border: none;
-      border-radius: 3px;
-      cursor: pointer;
-      font-weight: bold;
-      font-family: 'Fira Code', monospace; /* code-like font for the button */
-    }
-    .dropbtn:hover {
-      opacity: 0.8;
-    }
-    .dropdown-content {
-      display: none; /* Hidden by default */
-      position: absolute;
-      right: 0; /* Align dropdown on the right side */
-      background-color: #1E1E1E; /* Same color as top bar or code block */
-      min-width: 120px;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.5);
-      border: 1px solid #333;
-      border-radius: 3px;
-      z-index: 5;
-    }
-    .dropdown-content a {
-      color: #4EC9B0; 
-      text-decoration: none;
-      display: block;
-      padding: 10px;
-      font-family: Consolas, "Courier New", monospace; /* Code-like font */
-      font-size: 0.9em;
-      border-bottom: 1px solid #333;
-    }
-    .dropdown-content a:last-child {
-      border-bottom: none; 
-    }
-    .dropdown-content a:hover {
-      background-color: #333;
-      text-decoration: underline;
-    }
-    .show {
-      display: block; /* Toggle to show/hide */
-    }
-
-    /* MAIN CONTAINER */
-    .container {
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 20px;
-      text-align: center;
-    }
-
-    /* PROFILE PICTURE */
-    .profile-pic {
-      width: 160px;
-      height: 160px;
-      border-radius: 50%;
-      object-fit: cover;
-      margin-bottom: 20px;
-      border: 3px solid #444;
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
-    }
-
-    /* BIG NAME UNDER THE PROFILE PICTURE */
-    h1.name {
-      font-size: 2em;
-      font-weight: bold;
-      margin: 0;
-      margin-bottom: 10px;
-    }
-
-    /* OPTIONAL SHORT INTRO/TAGLINE */
-    .intro-text {
-      margin: 0 0 20px 0;
-      font-size: 1.1em;
-      color: #CCCCCC;
-    }
-
-    /* SOCIAL LINKS (LinkedIn, GitHub) */
-    .social-links {
-      margin: 15px 0 10px 0; 
-    }
-    .social-links a {
-      display: inline-block;
-      margin: 0 10px;
-    }
-    .social-links a img {
-      width: 40px;
-      height: 40px;
-      transition: opacity 0.2s;
-    }
-    .social-links a img:hover {
-      opacity: 0.7;
-    }
-
-    /* IMAGE BELOW ICONS */
-    .image-below {
-      margin-top: 10px; 
-      margin-bottom: 0; 
-    }
-    .image-below img {
-      display: block;
-      width: 70%;
-      max-width: 600px;
-      height: 105px;
-      object-fit: cover;
-      margin: 0 auto; 
-      border: 2px solid #444;
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
-    }
-
-    /* CODE BLOCK (VS CODE THEME) */
-    .code-block-dark {
-      background-color: #1E1E1E; 
-      color: #D4D4D4;           
-      text-align: left;
-      padding: 20px;
-      border-radius: 5px;
-      font-family: Consolas, "Courier New", monospace;
-      border: 1px solid #333;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-      margin-top: 15px; 
-    }
-    .code-block-dark pre {
-      margin: 0;
-      line-height: 1.4;
-      font-size: 14px;
-    }
-
-    /* SYNTAX HIGHLIGHTING */
-    .comment {
-      color: #6A9955; 
-      font-style: italic;
-    }
-    .function-name {
-      color: #C586C0; 
-      font-weight: bold;
-    }
-    .variable {
-      color: #DCDC9A; 
-    }
-    .string {
-      color: #CE9178; 
-    }
-
-    /* NAVIGATION INSIDE THE CODE BLOCK */
-    .nav-call {
-      color: #4EC9B0; 
-      text-decoration: none;
-      font-weight: normal; 
-    }
-    .nav-call:hover {
-      text-decoration: underline;
-    }
-
-    /* FOOTER */
-    footer {
-      text-align: center;
-      color: #888; 
-      padding: 10px 0;
-      margin-top: 30px;
-      font-size: 0.9em;
-    }
-  </style>
+  <!-- Link to Shared CSS -->
+  <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-  <!-- TOP BAR WITH TITLE ON LEFT, DROPDOWN BUTTON ON RIGHT -->
+  <!-- TOP BAR -->
   <div class="topbar">
-    <h1 class="title">Home</h1> <!-- Replaces "GGB" with a code-like "Home" heading -->
+    <h1 class="title">Home</h1>
     <div class="dropdown">
       <button class="dropbtn" onclick="toggleDropdown()">Portal</button>
       <div class="dropdown-content" id="myDropdown">
-        <!-- Same links as code nav for quick access -->
         <a href="resume.html">Resume()</a>
         <a href="education.html">Education()</a>
         <a href="projects.html">Projects()</a>
-        <a href="contacts.html">Contact()</a>
+        <a href="contact.html">Contact()</a>
       </div>
     </div>
   </div>
 
   <div class="container">
-    <!-- Profile Picture -->
-    <img src="cat.jpeg" alt="Profile Picture" class="profile-pic" />
+    <!-- Example: Profile Picture -->
+    <img src="images/cat.jpeg" alt="Profile Picture" class="profile-pic" />
 
-    <!-- Name under the profile picture -->
     <h1 class="name">Griffin Graham-Bennett</h1>
-
-    <!-- Optional short tagline or intro text -->
     <p class="intro-text">
       A passionate programmer who makes things work... sometimes.
     </p>
 
-    <!-- Social Links -->
+    <!-- Example: Social Links -->
     <div class="social-links">
-      <!-- LinkedIn Icon (Link) -->
       <a href="https://www.linkedin.com/in/your-linkedin-profile" target="_blank">
-        <img src="linkedin-icon.png" alt="LinkedIn">
+        <img src="images/linkedin-icon.png" alt="LinkedIn">
       </a>
-      <!-- GitHub Icon (Link) -->
       <a href="https://github.com/griffgb" target="_blank">
-        <img src="github-icon.png" alt="GitHub">
+        <img src="images/github-icon.png" alt="GitHub">
       </a>
 
-      <!-- An image (NOT a link) below the icons -->
+      <!-- Banner image below icons -->
       <div class="image-below">
-        <img src="uofa.png" alt="My Custom Image">
+        <img src="uofa.png" alt="University banner">
       </div>
     </div>
 
-    <!-- Dark-themed code snippet -->
+    <!-- Code snippet (VS Code theme) -->
     <div class="code-block-dark">
       <pre>
 <span class="comment">/**
@@ -267,36 +59,21 @@
   <span class="variable">let</span> skills = <span class="string">["JavaScript", "Python", "C", "SQL"]</span>;
   <span class="variable">let</span> interests = <span class="string">["WorkingOut", "Travelling", "BoardGames"]</span>;
 
-  <span class="comment">// Navigation calls (click to explore)</span>
+  <span class="comment">// Navigation calls</span>
   <a href="resume.html" class="nav-call">Resume();</a>
   <a href="education.html" class="nav-call">Education();</a>
   <a href="projects.html" class="nav-call">Projects();</a>
-  <a href="contacts.html" class="nav-call">Contact();</a>
+  <a href="contact.html" class="nav-call">Contact();</a>
 &#125;
       </pre>
     </div>
   </div>
 
-  <!-- COPYRIGHT FOOTER -->
   <footer>
     &copy; 2025 Griffin Graham-Bennett. All rights reserved.
   </footer>
 
-  <!-- TOGGLE SCRIPT FOR THE DROPDOWN MENU -->
-  <script>
-    function toggleDropdown() {
-      document.getElementById("myDropdown").classList.toggle("show");
-    }
-
-    // Close the dropdown if user clicks outside
-    window.onclick = function(event) {
-      if (!event.target.matches('.dropbtn')) {
-        var dropdown = document.getElementById("myDropdown");
-        if (dropdown.classList.contains('show')) {
-          dropdown.classList.remove('show');
-        }
-      }
-    }
-  </script>
+  <!-- Shared JS -->
+  <script src="js/dropdown.js"></script>
 </body>
 </html>
