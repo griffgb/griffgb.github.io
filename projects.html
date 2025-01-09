@@ -3,220 +3,20 @@
 <head>
   <meta charset="UTF-8">
   <title>Griffin Graham-Bennett - Projects</title>
-
-  <!-- OPTIONAL: Import a code-like font (Fira Code in this example) -->
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400&display=swap');
-  </style>
-
-  <style>
-    /* DARK BACKGROUND & LIGHT TEXT */
-    html, body {
-      margin: 0;
-      padding: 0;
-      font-family: Arial, sans-serif;
-      background: #2D2D2D; /* Dark background */
-      color: #D4D4D4;      /* Light text color */
-    }
-
-    /* TOP BAR */
-    .topbar {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      background-color: #1E1E1E; /* Dark bar for consistency */
-      padding: 10px 20px;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.5);
-    }
-    /* "Projects" header in a code-like font */
-    .topbar .title {
-      font-family: 'Fira Code', monospace; /* The imported code font */
-      font-size: 1.5em;
-      color: #4EC9B0; /* A highlight color */
-      margin: 0;
-    }
-
-    /* DROPDOWN MENU */
-    .dropdown {
-      position: relative;
-      display: inline-block;
-    }
-    .dropbtn {
-      background-color: #4EC9B0; /* Button color */
-      color: #1E1E1E;
-      padding: 8px 16px;
-      font-size: 1em;
-      border: none;
-      border-radius: 3px;
-      cursor: pointer;
-      font-weight: bold;
-      font-family: 'Fira Code', monospace; /* code-like font for the button */
-    }
-    .dropbtn:hover {
-      opacity: 0.8;
-    }
-    .dropdown-content {
-      display: none; /* Hidden by default */
-      position: absolute;
-      right: 0;      /* Align dropdown on the right side */
-      background-color: #1E1E1E;
-      min-width: 130px;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.5);
-      border: 1px solid #333;
-      border-radius: 3px;
-      z-index: 5;
-    }
-    .dropdown-content a {
-      color: #4EC9B0; 
-      text-decoration: none;
-      display: block;
-      padding: 10px;
-      font-family: Consolas, "Courier New", monospace; /* code-like font */
-      font-size: 0.9em;
-      border-bottom: 1px solid #333;
-    }
-    .dropdown-content a:last-child {
-      border-bottom: none;
-    }
-    .dropdown-content a:hover {
-      background-color: #333;
-      text-decoration: underline;
-    }
-    .show {
-      display: block; /* Toggle class for showing/hiding dropdown */
-    }
-
-    /* MAIN CONTAINER */
-    .container {
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 20px;
-      text-align: center;
-    }
-
-    h1 {
-      margin-top: 0;
-    }
-
-    /* CODE BLOCK (VS CODE THEME) */
-    .code-block-dark {
-      background-color: #1E1E1E;
-      color: #D4D4D4;
-      text-align: left;
-      padding: 20px;
-      border-radius: 5px;
-      font-family: Consolas, "Courier New", monospace;
-      border: 1px solid #333;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.3);
-      margin-top: 20px;
-    }
-    .code-block-dark pre {
-      margin: 0 0 15px 0;
-      line-height: 1.4;
-      font-size: 14px;
-    }
-
-    /* Syntax-like colors */
-    .comment {
-      color: #6A9955; 
-      font-style: italic;
-    }
-    .function-name {
-      color: #C586C0; 
-      font-weight: bold;
-    }
-    .variable {
-      color: #DCDC9A;
-    }
-    .string {
-      color: #CE9178;
-    }
-
-    /* Project Descriptions, Galleries, etc. */
-    .project-description {
-      font-family: Arial, sans-serif;
-      color: #CCCCCC;
-      margin-bottom: 20px;
-      line-height: 1.5;
-      text-align: left;
-    }
-
-    .screenshot-gallery {
-      display: flex;
-      justify-content: center;
-      gap: 10px;
-      flex-wrap: wrap;
-      margin: 15px 0;
-    }
-    .screenshot-gallery img,
-    .screenshot-gallery video {
-      width: 45%;
-      max-width: 400px;
-      border: 2px solid #444;
-      border-radius: 5px;
-      object-fit: cover;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.5);
-    }
-    .idea-image {
-      display: block;
-      margin: 15px auto;
-      max-width: 70%;
-      border: 2px solid #444;
-      border-radius: 5px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.5);
-      object-fit: cover;
-    }
-
-    .video-gallery {
-      display: flex;
-      gap: 10px;
-      justify-content: center;
-      flex-wrap: wrap;
-      margin: 15px 0;
-    }
-    .video-gallery video {
-      width: 45%;
-      max-width: 400px;
-      border: 2px solid #444;
-      border-radius: 5px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.5);
-      background: #000;
-    }
-
-    .nav-call {
-      color: #4EC9B0; 
-      text-decoration: none;
-      font-weight: normal; 
-      margin-right: 10px;
-    }
-    .nav-call:hover {
-      text-decoration: underline;
-    }
-
-    footer {
-      text-align: center;
-      color: #888; 
-      padding: 10px 0;
-      margin-top: 30px;
-      font-size: 0.9em;
-    }
-  </style>
+  <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
 
   <!-- TOP BAR -->
   <div class="topbar">
-    <!-- "Projects" in a code-like font -->
     <h1 class="title">Projects</h1>
-
-    <!-- DROPDOWN MENU ON THE RIGHT -->
     <div class="dropdown">
       <button class="dropbtn" onclick="toggleDropdown()">Portal</button>
       <div class="dropdown-content" id="myDropdown">
         <a href="index.html">Home()</a>
         <a href="resume.html">Resume()</a>
         <a href="education.html">Education()</a>
-        <a href="contacts.html">Contact()</a>
+        <a href="contact.html">Contact()</a>
       </div>
     </div>
   </div>
@@ -229,44 +29,28 @@
  * Project #1: My Website
  * - Idea image
  * - Short description
- * - Two screenshots
- * - Another description & GitHub link
+ * - Some screenshots or videos
+ * - GitHub link
  */</span>
 
 <span class="function-name">function</span> WebsiteProject() &#123;
+  <span class="comment">// Basic placeholders for your project details</span>
   <span class="variable">let</span> idea = <span class="string">"Came from personal brainstorming!"</span>;
-  <span class="variable">let</span> screenshots = <span class="string">["website-screenshot1.png", "website-screenshot2.png"]</span>;
   <span class="variable">let</span> repoLink = <span class="string">"https://github.com/username/my-website"</span>;
 
-  <span class="comment">// See final result below</span>
 &#125;
       </pre>
 
-      <!-- Real content for Project 1 -->
-      <img src="mjIDEA.png" alt="How I came up with the website idea" class="idea-image">
-
-      <p class="project-description">
-        I love music and believe that to truly appreciate an artist or album, you need to
-        listen to the entire album rather than just individual songs. Previously, I used my
-        personal Discord to share my thoughts, embedding links to albums, picking my top
-        three songs from each album, giving an overall score out of 10, and writing a short
-        description explaining my rating. However, it became challenging to keep track of
-        the albums I had already listened to and reviewed. To solve this, I decided to create
-        a website called "Music Journal" where I can store and organize my album reviews more effectively.
+      <!-- Your real content here (images, videos, descriptions, etc.) -->
+      <!-- Example: an 'idea' image and a paragraph -->
+      <img src="images/mjIDEA.png" alt="Website Idea" style="max-width: 70%; margin: 15px auto; display: block;">
+      <p style="text-align: left; margin-bottom: 20px;">
+        I love music and wanted to store my album reviews in a neat website ...
       </p>
 
-      <div class="screenshot-gallery">
-        <video controls poster="fallback-image.png">
-          <source src="mj-vid1.mov" type="video/quicktime">
-          Your browser does not support the video tag. Please upgrade your browser or use a compatible format.
-        </video>
-
-        <img src="website-screenshot2.png" alt="Website Screenshot 2">
-      </div>
-
-      <p class="project-description">
-        Built with HTML, CSS, and a bit of JavaScript for interactivity.
-        Check out the full source code on
+      <!-- Link to GitHub, screenshots, etc. -->
+      <p style="text-align: left;">
+        Check out the source on 
         <a href="https://github.com/username/my-website" class="nav-call" target="_blank">GitHub</a>.
       </p>
     </div>
@@ -276,50 +60,40 @@
       <pre>
 <span class="comment">/**
  * Project #2: My App
- * - Two demo videos side by side
+ * - Demo videos
  * - Description
  * - GitHub link
  */</span>
 
 <span class="function-name">function</span> AppProject() &#123;
-  <span class="variable">let</span> videoDemos = <span class="string">["app-demo1.mp4", "app-demo2.mp4"]</span>;
+  <span class="comment">// Another placeholder for your app details</span>
   <span class="variable">let</span> repoLink = <span class="string">"https://github.com/username/my-app"</span>;
 
-  <span class="comment">// See final result below</span>
 &#125;
       </pre>
 
-      <div class="video-gallery">
-        <video src="app-demo1.mp4" controls></video>
-        <video src="app-demo2.mp4" controls></video>
-      </div>
-
-      <p class="project-description">
-        This mobile app helps keep track of daily tasks, organizes them, and integrates
-        with a simple backend for sync. It addresses a personal pain point in staying
-        productive, and gave me a chance to explore cross-platform development.
+      <!-- Real content for project #2 -->
+      <p style="text-align: left; margin-bottom: 20px;">
+        This mobile app tracks daily tasks, organizes them, syncs with a backend...
       </p>
-
-      <p class="project-description">
-        Explore the source code here:
+      <p style="text-align: left;">
+        Source code: 
         <a href="https://github.com/username/my-app" class="nav-call" target="_blank">GitHub</a>
       </p>
     </div>
 
-    <!-- CODE-STYLE NAVIGATION (PLACED AT THE BOTTOM) -->
+    <!-- NAVIGATION CODE-BLOCK -->
     <div class="code-block-dark">
       <pre>
 <span class="comment">/**
  * Navigation
- * Explore other pages
  */</span>
 
 <span class="function-name">function</span> SiteNavigation() &#123;
-  <span class="comment">// Click these calls to jump around</span>
   <a href="index.html" class="nav-call">Home();</a>
   <a href="resume.html" class="nav-call">Resume();</a>
   <a href="education.html" class="nav-call">Education();</a>
-  <a href="contacts.html" class="nav-call">Contact();</a>
+  <a href="contact.html" class="nav-call">Contact();</a>
 &#125;
       </pre>
     </div>
@@ -329,21 +103,6 @@
     &copy; 2025 Griffin Graham-Bennett. All rights reserved.
   </footer>
 
-  <!-- TOGGLE SCRIPT FOR THE DROPDOWN MENU -->
-  <script>
-    function toggleDropdown() {
-      document.getElementById("myDropdown").classList.toggle("show");
-    }
-
-    // Close the dropdown if the user clicks outside of it
-    window.onclick = function(event) {
-      if (!event.target.matches('.dropbtn')) {
-        var dropdown = document.getElementById("myDropdown");
-        if (dropdown && dropdown.classList.contains('show')) {
-          dropdown.classList.remove('show');
-        }
-      }
-    }
-  </script>
+  <script src="js/dropdown.js"></script>
 </body>
 </html>

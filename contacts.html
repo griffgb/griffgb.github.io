@@ -3,158 +3,13 @@
 <head>
   <meta charset="UTF-8" />
   <title>Griffin Graham-Bennett - Contact</title>
-
-  <!-- OPTIONAL: Import a code-like font (Fira Code) -->
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400&display=swap');
-  </style>
-
-  <style>
-    /* DARK BACKGROUND & LIGHT TEXT */
-    html, body {
-      margin: 0;
-      padding: 0;
-      font-family: Arial, sans-serif;
-      background: #2D2D2D; /* Dark background for entire page */
-      color: #D4D4D4;      /* Light text color by default */
-    }
-
-    /* TOP BAR (HEADER) */
-    .topbar {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      background-color: #1E1E1E; /* Darker bar */
-      padding: 10px 20px;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.5);
-    }
-    /* Title in a code-like font */
-    .topbar .title {
-      font-family: 'Fira Code', monospace;
-      font-size: 1.5em;
-      color: #4EC9B0; /* A highlight color */
-      margin: 0;
-    }
-
-    /* DROPDOWN MENU */
-    .dropdown {
-      position: relative;
-      display: inline-block;
-    }
-    .dropbtn {
-      background-color: #4EC9B0; /* Button color */
-      color: #1E1E1E;
-      padding: 8px 16px;
-      font-size: 1em;
-      border: none;
-      border-radius: 3px;
-      cursor: pointer;
-      font-weight: bold;
-      font-family: 'Fira Code', monospace; /* code-like font for the button */
-    }
-    .dropbtn:hover {
-      opacity: 0.8;
-    }
-    .dropdown-content {
-      display: none; /* Hidden by default */
-      position: absolute;
-      right: 0;      /* Align dropdown on the right side */
-      background-color: #1E1E1E;
-      min-width: 130px;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.5);
-      border: 1px solid #333;
-      border-radius: 3px;
-      z-index: 5;
-    }
-    .dropdown-content a {
-      color: #4EC9B0; 
-      text-decoration: none;
-      display: block;
-      padding: 10px;
-      font-family: Consolas, "Courier New", monospace; /* code-like font */
-      font-size: 0.9em;
-      border-bottom: 1px solid #333;
-    }
-    .dropdown-content a:last-child {
-      border-bottom: none;
-    }
-    .dropdown-content a:hover {
-      background-color: #333;
-      text-decoration: underline;
-    }
-    .show {
-      display: block; /* Toggle to show/hide */
-    }
-
-    /* MAIN CONTAINER */
-    .container {
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 20px;
-      text-align: center;
-    }
-
-    /* CODE BLOCK (VS CODE THEME) */
-    .code-block-dark {
-      background-color: #1E1E1E; 
-      color: #D4D4D4;           
-      text-align: left;
-      padding: 20px;
-      border-radius: 5px;
-      font-family: Consolas, "Courier New", monospace;
-      border: 1px solid #333;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-      margin-top: 20px;
-      display: inline-block;
-    }
-    .code-block-dark pre {
-      margin: 0;
-      line-height: 1.4;
-      font-size: 14px;
-    }
-
-    /* SYNTAX HIGHLIGHTING */
-    .comment {
-      color: #6A9955; /* Greenish comment color */
-      font-style: italic;
-    }
-    .function-name {
-      color: #C586C0; /* Purple color */
-      font-weight: bold;
-    }
-    .variable {
-      color: #DCDC9A; /* Yellowish */
-    }
-    .string {
-      color: #CE9178; /* Reddish hue for strings */
-    }
-
-    /* NAVIGATION INSIDE THE CODE BLOCK */
-    .nav-call {
-      color: #4EC9B0; 
-      text-decoration: none;
-      font-weight: normal; 
-      margin-right: 10px;
-    }
-    .nav-call:hover {
-      text-decoration: underline;
-    }
-
-    footer {
-      text-align: center;
-      color: #888; 
-      padding: 10px 0;
-      margin-top: 30px;
-      font-size: 0.9em;
-    }
-  </style>
+  <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
 
   <!-- TOP BAR -->
   <div class="topbar">
     <h1 class="title">Contact</h1>
-    <!-- DROPDOWN MENU ON THE RIGHT -->
     <div class="dropdown">
       <button class="dropbtn" onclick="toggleDropdown()">Portal</button>
       <div class="dropdown-content" id="myDropdown">
@@ -167,7 +22,6 @@
   </div>
 
   <div class="container">
-    <!-- Code-themed contact info -->
     <div class="code-block-dark">
       <pre>
 <span class="comment">/**
@@ -176,9 +30,9 @@
  */</span>
 
 <span class="function-name">function</span> ContactPage() &#123;
-    <span class="comment">// My contact details (email only)</span>
-    <span class="variable">let</span> email = 
-        <a href="mailto:griffin@example.com" class="string">"griffgb02@gmail.com"</a>;
+  <span class="comment">// My contact details (email only)</span>
+  <span class="variable">let</span> email = 
+    <a href="mailto:griffin@example.com" class="string">"griffin@example.com"</a>;
 
   <span class="comment">// Navigation calls</span>
   <a href="index.html" class="nav-call">Home();</a>
@@ -190,26 +44,10 @@
     </div>
   </div>
 
-  <!-- FOOTER -->
   <footer>
     &copy; 2025 Griffin Graham-Bennett. All rights reserved.
   </footer>
 
-  <!-- TOGGLE SCRIPT FOR THE DROPDOWN MENU -->
-  <script>
-    function toggleDropdown() {
-      document.getElementById("myDropdown").classList.toggle("show");
-    }
-
-    // Close the dropdown if the user clicks outside of it
-    window.onclick = function(event) {
-      if (!event.target.matches('.dropbtn')) {
-        var dropdown = document.getElementById("myDropdown");
-        if (dropdown && dropdown.classList.contains('show')) {
-          dropdown.classList.remove('show');
-        }
-      }
-    }
-  </script>
+  <script src="js/dropdown.js"></script>
 </body>
 </html>
