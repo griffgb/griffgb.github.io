@@ -3,6 +3,12 @@
 <head>
   <meta charset="UTF-8" />
   <title>Griffin Graham-Bennett - Home</title>
+
+  <!-- OPTIONAL: Import a code-like font (Fira Code) for consistency -->
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400&display=swap');
+  </style>
+
   <style>
     /* DARK BACKGROUND & LIGHT TEXT */
     html, body {
@@ -22,13 +28,15 @@
       padding: 10px 20px;
       box-shadow: 0 2px 4px rgba(0,0,0,0.5);
     }
-    .topbar .logo {
-      font-size: 1.2em;
-      font-weight: bold;
-      color: #D4D4D4; /* or #4EC9B0 if you'd like a highlight color */
+
+    /* "Home" title in a code-like font */
+    .topbar .title {
+      font-family: 'Fira Code', monospace; /* Code-like font */
+      font-size: 1.5em;
+      color: #4EC9B0; /* A highlight color */
       margin: 0;
     }
-    
+
     /* DROPDOWN MENU */
     .dropdown {
       position: relative; /* to contain the absolute-positioned menu */
@@ -43,6 +51,7 @@
       border-radius: 3px;
       cursor: pointer;
       font-weight: bold;
+      font-family: 'Fira Code', monospace; /* code-like font for the button */
     }
     .dropbtn:hover {
       opacity: 0.8;
@@ -155,7 +164,6 @@
       font-family: Consolas, "Courier New", monospace;
       border: 1px solid #333;
       box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-
       margin-top: 15px; 
     }
     .code-block-dark pre {
@@ -201,13 +209,13 @@
   </style>
 </head>
 <body>
-  <!-- TOP BAR WITH LOGO ON LEFT, DROPDOWN BUTTON ON RIGHT -->
+  <!-- TOP BAR WITH TITLE ON LEFT, DROPDOWN BUTTON ON RIGHT -->
   <div class="topbar">
-    <h2 class="logo">GGB</h2>
+    <h1 class="title">Home</h1> <!-- Replaces "GGB" with a code-like "Home" heading -->
     <div class="dropdown">
       <button class="dropbtn" onclick="toggleDropdown()">Portal</button>
       <div class="dropdown-content" id="myDropdown">
-        <!-- Same links as code nav but clickable for quick access -->
+        <!-- Same links as code nav for quick access -->
         <a href="resume.html">Resume()</a>
         <a href="education.html">Education()</a>
         <a href="projects.html">Projects()</a>
@@ -263,7 +271,7 @@
   <a href="resume.html" class="nav-call">Resume();</a>
   <a href="education.html" class="nav-call">Education();</a>
   <a href="projects.html" class="nav-call">Projects();</a>
-  <a href="contact.html" class="nav-call">Contact();</a>
+  <a href="contacts.html" class="nav-call">Contact();</a>
 &#125;
       </pre>
     </div>
@@ -280,7 +288,7 @@
       document.getElementById("myDropdown").classList.toggle("show");
     }
 
-    // Close the dropdown if the user clicks outside of it
+    // Close the dropdown if user clicks outside
     window.onclick = function(event) {
       if (!event.target.matches('.dropbtn')) {
         var dropdown = document.getElementById("myDropdown");
