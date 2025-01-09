@@ -206,3 +206,21 @@ h1.name {
 .nav-call:hover {
   text-decoration: underline;
 }
+
+.video-gallery {
+    display: flex;               /* Enable flexbox for alignment */
+    gap: 15px;                   /* Add space between videos */
+    justify-content: center;     /* Center the videos */
+    margin: 20px 0;              /* Add spacing around the gallery */
+    flex-wrap: wrap;             /* Allow wrapping on smaller screens */
+  }
+  
+  .video-gallery video {
+    width: 45%;                  /* Each video takes up 45% of the container width */
+    max-width: 400px;            /* Set a maximum width for larger screens */
+    border: 2px solid #444;      /* Add a border for styling */
+    border-radius: 5px;          /* Rounded corners */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5); /* Subtle shadow */
+    background-color: #000;      /* Background color for fallback */
+  }
+  
