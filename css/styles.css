@@ -209,17 +209,18 @@ h1.name {
 
 .video-gallery {
   display: flex;
-  flex-direction: column; /* Stacks the elements vertically */
+  flex-direction: column; /* Stacks elements vertically */
   align-items: center; /* Centers the video and image */
-  gap: 20px; /* Adds space between the video and the image */
-  max-width: 800px; /* Optional: Restricts the width of the container */
-  margin: 20px auto; /* Centers the gallery horizontally */
+  gap: 20px; /* Adds space between the video and image */
+  max-width: 100%; /* Prevents elements from overflowing */
+  margin: 20px auto; /* Centers the gallery */
 }
 
 .video-gallery video,
 .video-gallery img {
-  width: 100%; /* Makes the video and image responsive */
-  max-width: 100%; /* Ensures they don’t exceed the container width */
-  height: auto; /* Maintains aspect ratio */
+  width: 80%; /* Adjust width to fit the container */
+  max-width: 800px; /* Optional: Limit maximum size */
+  height: auto; /* Maintain aspect ratio */
   border-radius: 8px; /* Optional: Adds rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Adds subtle shadow */
 }
