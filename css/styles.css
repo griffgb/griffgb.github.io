@@ -207,20 +207,34 @@ h1.name {
   text-decoration: underline;
 }
 
-.video-gallery {
+/* Stacked Gallery: Project #1 */
+.stacked-gallery {
   display: flex;
   flex-direction: column; /* Stacks elements vertically */
   align-items: center; /* Centers the video and image */
-  gap: 20px; /* Adds space between the video and image */
-  max-width: 100%; /* Prevents elements from overflowing */
-  margin: 20px auto; /* Centers the gallery */
+  gap: 20px; /* Space between video and image */
 }
 
-.video-gallery video,
-.video-gallery img {
-  width: 80%; /* Adjust width to fit the container */
-  max-width: 800px; /* Optional: Limit maximum size */
-  height: auto; /* Maintain aspect ratio */
-  border-radius: 8px; /* Optional: Adds rounded corners */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Adds subtle shadow */
+.stacked-gallery video,
+.stacked-gallery img {
+  width: 80%; /* Adjust width as needed */
+  max-width: 800px;
+  height: auto; /* Maintains aspect ratio */
+  border-radius: 8px; /* Optional: Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Subtle shadow */
+}
+
+/* Side-by-Side Gallery: Project #2 */
+.side-by-side-gallery {
+  display: flex;
+  justify-content: space-between; /* Ensures even spacing between videos */
+  gap: 20px; /* Space between videos */
+}
+
+.side-by-side-gallery video {
+  width: 48%; /* Each video takes up half the container width */
+  max-width: 100%;
+  height: auto; /* Maintains aspect ratio */
+  border-radius: 8px; /* Optional: Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Subtle shadow */
 }
