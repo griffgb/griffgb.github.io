@@ -208,26 +208,18 @@ h1.name {
 }
 
 .video-gallery {
-    display: flex;               /* Enable flexbox for alignment */
-    gap: 15px;                   /* Add space between videos */
-    justify-content: center;     /* Center the videos */
-    margin: 20px 0;              /* Add spacing around the gallery */
-    flex-wrap: wrap;             /* Allow wrapping on smaller screens */
-  }
-  
- 
-
-.video-gallery {
-  display: flex;
-  justify-content: space-between; /* Ensures even spacing between elements */
-  align-items: center; /* Aligns video and image vertically */
-  gap: 20px; /* Adds spacing between the video and image */
+  display: flex; /* Enables side-by-side layout */
+  align-items: center; /* Vertically aligns items */
+  gap: 20px; /* Adds space between the video and image */
 }
 
-.video-gallery video,
+.video-gallery video {
+  flex: 1; /* Ensures the video takes equal space */
+  max-width: 100%; /* Prevents overflow */
+}
+
 .video-gallery img {
-  width: 48%; /* Adjusts width so they fit side-by-side */
-  border-radius: 8px; /* Optional: Adds rounded corners */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Adds a subtle shadow */
+  flex: 1; /* Ensures the image takes equal space */
+  max-width: 100%; /* Prevents overflow */
+  height: auto; /* Maintains aspect ratio */
 }
-
