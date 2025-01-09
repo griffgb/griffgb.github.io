@@ -2,16 +2,91 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <title>Griffin Graham-Bennett - Resume</title>
+
+  <!-- OPTIONAL: Import a code-like font (Fira Code in this example) -->
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400&display=swap');
+  </style>
+
   <style>
     /* DARK BACKGROUND & LIGHT TEXT */
     html, body {
       margin: 0;
       padding: 0;
       font-family: Arial, sans-serif;
-      background: #2D2D2D; /* Dark background for entire page */
-      color: #D4D4D4;      /* Light text color by default */
+      background: #2D2D2D; /* Dark background */
+      color: #D4D4D4;      /* Light text color */
     }
 
+    /* TOP BAR (HEADER) */
+    .topbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #1E1E1E;  /* Dark bar for consistency */
+      padding: 10px 20px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.5);
+    }
+    /* "Resume" header in a code-like font */
+    .topbar .title {
+      font-family: 'Fira Code', monospace; /* The imported code font */
+      font-size: 1.5em;
+      color: #4EC9B0; /* A nice highlight color */
+      margin: 0;
+    }
+
+    /* DROPDOWN MENU */
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+    .dropbtn {
+      background-color: #4EC9B0; /* Button color */
+      color: #1E1E1E;
+      padding: 8px 16px;
+      font-size: 1em;
+      border: none;
+      border-radius: 3px;
+      cursor: pointer;
+      font-weight: bold;
+      font-family: 'Fira Code', monospace; /* code-like font for the button */
+    }
+    .dropbtn:hover {
+      opacity: 0.8;
+    }
+    .dropdown-content {
+      display: none; /* Hidden by default */
+      position: absolute;
+      right: 0; /* Align dropdown on the right side */
+      background-color: #1E1E1E;
+      min-width: 130px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.5);
+      border: 1px solid #333;
+      border-radius: 3px;
+      z-index: 5;
+    }
+    .dropdown-content a {
+      color: #4EC9B0; 
+      text-decoration: none;
+      display: block;
+      padding: 10px;
+      font-family: Consolas, "Courier New", monospace; /* Code-like font */
+      font-size: 0.9em;
+      border-bottom: 1px solid #333;
+    }
+    .dropdown-content a:last-child {
+      border-bottom: none;
+    }
+    .dropdown-content a:hover {
+      background-color: #333;
+      text-decoration: underline;
+    }
+    .show {
+      display: block; /* Toggle to show/hide the dropdown */
+    }
+
+    /* MAIN CONTAINER */
     .container {
       max-width: 800px;
       margin: 0 auto;
@@ -19,24 +94,18 @@
       text-align: center;
     }
 
-    h1 {
-      margin-top: 0;
-    }
-
-    /* BOX (VS CODE THEME STYLING) */
+    /* CODE-BLOCK (VS CODE THEME) */
     .code-block-dark {
-      background-color: #1E1E1E; 
-      color: #D4D4D4;           
+      background-color: #1E1E1E;
+      color: #D4D4D4;
       text-align: left;
       padding: 20px;
       border-radius: 5px;
       border: 1px solid #333;
       box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
       margin-top: 20px;
-      font-family: Consolas, "Courier New", monospace; /* Monospace for code look */
+      font-family: Consolas, "Courier New", monospace; /* Code-like style */
     }
-
-    /* The <pre> inside .code-block-dark for code-like text */
     .code-block-dark pre {
       margin: 0 0 15px 0;
       line-height: 1.4;
@@ -46,11 +115,11 @@
 
     /* Syntax-like styling */
     .comment {
-      color: #6A9955; /* Greenish comment color */
+      color: #6A9955; 
       font-style: italic;
     }
     .function-name {
-      color: #C586C0; /* Purple color */
+      color: #C586C0; 
       font-weight: bold;
     }
     .variable {
@@ -63,15 +132,15 @@
     /* PDF VIEWER */
     .pdf-viewer {
       width: 100%;
-      height: 800px; /* Adjust the height as needed */
-      border: none;  /* Removes default iframe border */
-      display: block; 
+      height: 800px; /* Adjust height as needed */
+      border: none; 
+      display: block;
       margin: 0 auto;
       box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
-      background: #000; /* fallback background if PDF can't load */
+      background: #000; /* Fallback background if PDF doesn't load */
     }
 
-    /* NAV-LINK STYLES (CODE CALLS) */
+    /* NAV-CALLS (CODE LINKS) */
     .nav-call {
       color: #4EC9B0;
       text-decoration: none;
@@ -92,9 +161,25 @@
   </style>
 </head>
 <body>
-  <div class="container">
+  <!-- TOP BAR -->
+  <div class="topbar">
+    <!-- "Resume" in a cool code-like font -->
+    <h1 class="title">Resume</h1>
 
-    <!-- CODE-BLOCK CONTAINING THE EMBEDDED PDF -->
+    <!-- DROPDOWN ON THE RIGHT -->
+    <div class="dropdown">
+      <button class="dropbtn" onclick="toggleDropdown()">Portal</button>
+      <div class="dropdown-content" id="myDropdown">
+        <a href="index.html">Home()</a>
+        <a href="education.html">Education()</a>
+        <a href="projects.html">Projects()</a>
+        <a href="contact.html">Contact()</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <!-- CODE-BLOCK: EMBEDDED PDF -->
     <div class="code-block-dark">
       <pre>
 <span class="comment">/**
@@ -115,7 +200,7 @@
       </iframe>
     </div>
 
-    <!-- CODE-BLOCK FOR NAVIGATION (AT THE BOTTOM) -->
+    <!-- CODE-BLOCK: NAVIGATION -->
     <div class="code-block-dark">
       <pre>
 <span class="comment">/**
@@ -136,5 +221,22 @@
   <footer>
     &copy; 2025 Griffin Graham-Bennett. All rights reserved.
   </footer>
+
+  <!-- TOGGLE SCRIPT FOR THE DROPDOWN MENU -->
+  <script>
+    function toggleDropdown() {
+      document.getElementById("myDropdown").classList.toggle("show");
+    }
+
+    // Close the dropdown if the user clicks outside of it
+    window.onclick = function(event) {
+      if (!event.target.matches('.dropbtn')) {
+        var dropdown = document.getElementById("myDropdown");
+        if (dropdown && dropdown.classList.contains('show')) {
+          dropdown.classList.remove('show');
+        }
+      }
+    }
+  </script>
 </body>
 </html>
